@@ -1,0 +1,326 @@
+{
+ "hero": {
+  "badge": "Digital Engineering & Business Automation · Tunisie · UK",
+  "h1": "Transformation digitale & automation orientée",
+  "typed": [
+   "performance",
+   "croissance",
+   "efficacité",
+   "résultats"
+  ],
+  "lead": "Nous aidons les entreprises à structurer leurs opérations, automatiser leurs processus et exploiter pleinement leur potentiel avec des solutions ERP fiables et des workflows intelligents.",
+  "btn1_t": "Demander un devis",
+  "btn1_u": "devis",
+  "btn2_t": "Explorer nos services",
+  "btn2_u": "services",
+  "marquee": [
+   "Odoo",
+   "Dolibarr",
+   "ERPNext",
+   "APA",
+   "Intelligence artificielle",
+   "Automatisation",
+   "Intégration de systèmes",
+   "Web & mobile"
+  ]
+ },
+ "stats": [
+  {
+   "pre": "+",
+   "to": "25",
+   "suf": "%",
+   "text": "de croissance annuelle moyenne depuis 2023"
+  },
+  {
+   "pre": "+",
+   "to": "300",
+   "suf": "",
+   "text": "projets livrés en Tunisie, France, UK et Moyen-Orient"
+  },
+  {
+   "pre": "",
+   "to": "50",
+   "suf": "%",
+   "text": "de gain de productivité grâce aux ERP & automatisations"
+  },
+  {
+   "pre": "+",
+   "to": "50",
+   "suf": "",
+   "text": "workflows d’automatisation (ERP, APA, IA) déployés"
+  }
+ ],
+ "services": {
+  "label": "Services",
+  "h2": "Toutes les expertises pour réussir vos {{projets digitaux}}",
+  "intro": "Des solutions concrètes, mesurables et adaptées à la réalité métier des entreprises tunisiennes et internationales."
+ },
+ "change": {
+  "show": 1,
+  "label": "Pourquoi Navitrends",
+  "h2": "Le monde change, {{votre entreprise aussi !}}",
+  "intro": "Notre mission est d’aider les entreprises à se transformer, travailler plus intelligemment et accélérer leur croissance grâce à des solutions concrètes de **digital engineering, ERP et automation**.",
+  "rows": [
+   {
+    "color": "blue",
+    "rev": 0,
+    "vis": "flow",
+    "small": "Automatisation & IA",
+    "h3": "Moins de tâches répétitives",
+    "list": [
+     "Réduction significative du temps opérationnel",
+     "Diminution des erreurs et des oublis",
+     "Processus plus fiables et traçables",
+     "Meilleure coordination entre les équipes et les outils"
+    ],
+    "link_t": "Découvrir l’automatisation",
+    "link_u": "automatisation-des-processus-metiers",
+    "img": "v4/feat-auto.jpg",
+    "alt": "Développeuse devant plusieurs écrans de code"
+   },
+   {
+    "color": "gold",
+    "rev": 1,
+    "vis": "card",
+    "small": "Intégration & Données",
+    "h3": "Des données fiables",
+    "list": [
+     "Données fiables et centralisées",
+     "Réduction des erreurs et des ressaisies",
+     "Meilleure coordination entre outils et équipes",
+     "Vision globale et cohérente de l’activité"
+    ],
+    "link_t": "Découvrir l’intégration",
+    "link_u": "integration-de-systemes-structuration-des-donnees",
+    "img": "v4/feat-data.jpg",
+    "alt": "Équipe qui analyse des indicateurs sur une table de travail"
+   },
+   {
+    "color": "lilac",
+    "rev": 0,
+    "vis": "steps",
+    "small": "Conseil & Transformation digitale",
+    "h3": "De la valeur, durablement",
+    "list": [
+     "Des décisions technologiques alignées avec les enjeux métiers",
+     "Des investissements mieux maîtrisés",
+     "Des processus optimisés et performants",
+     "Une création de valeur durable et mesurable"
+    ],
+    "link_t": "Découvrir le conseil",
+    "link_u": "conseil-en-transformation-digitale-optimisation-des-processus",
+    "img": "v4/svc-cut-conseil.webp",
+    "alt": "Consultant souriant"
+   }
+  ]
+ },
+ "approach": {
+  "show": 1,
+  "label": "Notre approche",
+  "h2": "Une démarche {{claire et pragmatique}}",
+  "intro": "Chaque projet chez Navitrends suit une démarche claire et pragmatique. Choisissez un service pour découvrir les étapes.",
+  "tabs": [
+   {
+    "tab": "Structurer",
+    "h3": "Structurer l’entreprise autour d’un ERP adapté à la réalité métier",
+    "p": "Chez Navitrends, nous accompagnons les entreprises dans l’intégration, la configuration et l’optimisation de solutions ERP open source afin de centraliser les données, structurer les processus et fiabiliser la gestion quotidienne.",
+    "btn_t": "ERP & Systèmes de gestion",
+    "btn_u": "integration-optimisation-derp",
+    "steps": [
+     "Analyse des besoins métiers",
+     "Paramétrage et configuration",
+     "Optimisation des processus",
+     "Formation & accompagnement",
+     "Support et évolution",
+     "Mesure de la performance & amélioration continue"
+    ]
+   },
+   {
+    "tab": "Automatiser",
+    "h3": "Automatiser pour gagner en efficacité et en fiabilité",
+    "p": "Chez Navitrends, nous aidons les entreprises à automatiser leurs processus métiers afin de réduire les tâches répétitives, limiter les erreurs humaines et accélérer les opérations quotidiennes.",
+    "btn_t": "Automatisation & IA",
+    "btn_u": "automatisation-des-processus-metiers",
+    "steps": [
+     "Analyse des processus existants",
+     "Définition des règles métiers",
+     "Conception des workflows automatisés",
+     "Déploiement & tests",
+     "Formation & accompagnement",
+     "Mesure de la performance & amélioration continue"
+    ]
+   },
+   {
+    "tab": "Développer",
+    "h3": "Des applications utiles, pensées pour les usages réels",
+    "p": "Chez Navitrends, nous concevons et développons des applications web et mobiles sur mesure, conçues pour répondre à des besoins métiers précis et s’intégrer naturellement dans l’écosystème digital existant de l’entreprise.",
+    "btn_t": "Développement sur mesure",
+    "btn_u": "developpement-dapplications-web-et-mobiles-sur-mesure",
+    "steps": [
+     "Analyse des besoins fonctionnels",
+     "Conception fonctionnelle & UX",
+     "Développement technique",
+     "Tests & validation",
+     "Mise en production & accompagnement",
+     "Mesure de la performance & évolution continue"
+    ]
+   },
+   {
+    "tab": "Connecter",
+    "h3": "Connecter les outils, fiabiliser les données, fluidifier les opérations",
+    "p": "Chez Navitrends, nous aidons les entreprises à connecter leurs systèmes digitaux et à structurer leurs données afin d’assurer une circulation fluide, fiable et cohérente de l’information entre les outils et les équipes.",
+    "btn_t": "Intégration & Données",
+    "btn_u": "integration-de-systemes-structuration-des-donnees",
+    "steps": [
+     "Analyse de l’existant",
+     "Définition de l’architecture cible",
+     "Mise en place des connecteurs & API",
+     "Tests & sécurisation des flux",
+     "Documentation & accompagnement",
+     "Suivi, optimisation & amélioration continue"
+    ]
+   },
+   {
+    "tab": "Accompagner",
+    "h3": "Assurer l’adoption, la performance et l’autonomie dans la durée",
+    "p": "Chez Navitrends, nous sommes convaincus qu’une solution digitale n’a de valeur que si elle est adoptée, maîtrisée et exploitée efficacement par les équipes.",
+    "btn_t": "Accompagnement & Conseil",
+    "btn_u": "accompagnement-operationnel-montee-en-competence-des-equipes",
+    "steps": [
+     "Évaluation des besoins et des profils utilisateurs",
+     "Construction du plan d’accompagnement",
+     "Formation opérationnelle ciblée",
+     "Support & assistance post-déploiement",
+     "Suivi de l’adoption et des usages",
+     "Amélioration continue & montée en maturité digitale"
+    ]
+   },
+   {
+    "tab": "Conseiller",
+    "h3": "Donner une direction claire à la transformation digitale",
+    "p": "Chez Navitrends, nous accompagnons les dirigeants et les équipes dans la définition et la structuration de leur transformation digitale, en partant des enjeux métiers réels, et non de la technologie seule.",
+    "btn_t": "Conseil & Transformation digitale",
+    "btn_u": "conseil-en-transformation-digitale-optimisation-des-processus",
+    "steps": [
+     "Diagnostic des processus et de l’existant",
+     "Clarification des enjeux et objectifs",
+     "Définition de la feuille de route digitale",
+     "Accompagnement à la prise de décision",
+     "Pilotage et coordination des projets",
+     "Mesure de la performance & optimisation continue"
+    ]
+   }
+  ]
+ },
+ "tools": {
+  "show": 1,
+  "label": "Notre expertise",
+  "h2": "Odoo, Dolibarr, ERPNext {{et bien plus}}",
+  "intro": "Nous travaillons principalement avec des solutions ERP open source reconnues, que nous adaptons aux besoins spécifiques de chaque organisation.",
+  "m1": [
+   "Odoo",
+   "Dolibarr",
+   "ERPNext",
+   "Ventes",
+   "Achats",
+   "Stocks",
+   "Comptabilité",
+   "Production",
+   "RH"
+  ],
+  "m2": [
+   "Workflows ERP",
+   "Emails & notifications",
+   "API et connecteurs",
+   "Bases de données structurées",
+   "Applications web",
+   "Applications mobiles Android / iOS",
+   "Formation des équipes",
+   "Support post-déploiement",
+   "Feuille de route digitale"
+  ]
+ },
+ "about": {
+  "img": "v4/real-hero.jpg",
+  "alt": "Équipe Navitrends autour d’une interface digitale : ERP, automatisation et intelligence artificielle",
+  "stick_n": "+300",
+  "stick_t": "projets\nlivrés",
+  "label": "À propos",
+  "h2": "Des solutions concrètes, {{pas du jargon}}",
+  "intro": "Navitrends combine ERP, automatisation (APA), intelligence artificielle, intégration système et développement sur mesure.",
+  "ps": [
+   "Notre approche vise à fiabiliser les données, optimiser les processus métiers et permettre aux équipes de se concentrer sur l’essentiel : **la création de valeur et le développement du business**.",
+   "Avec Navitrends, les entreprises avancent plus vite, prennent de meilleures décisions et exploitent pleinement leur potentiel."
+  ],
+  "list": [
+   "Éliminer les tâches répétitives",
+   "Fiabiliser les données",
+   "Optimiser les processus métiers"
+  ],
+  "btn_t": "Voir plus",
+  "btn_u": "a-propos"
+ },
+ "cases": {
+  "label": "Travaux",
+  "h2": "Nos {{réalisations}}",
+  "intro": "Découvrez nos réalisations : des projets innovants qui témoignent de notre expertise et de notre engagement envers la réussite de nos clients.",
+  "link_t": "Voir toutes les études de cas"
+ },
+ "presence": {
+  "show": 1,
+  "label": "Présence internationale",
+  "h2": "Tunisie, Europe, Royaume-Uni et Moyen-Orient",
+  "p": "Implantée en Tunisie et au Royaume-Uni, Navitrends intervient auprès des PME, industriels et organisations ambitieuses."
+ },
+ "blog": {
+  "label": "Blog",
+  "h2": "Expertise digitale {{Navitrends}}",
+  "intro": "Analyses, retours d’expérience et bonnes pratiques sur l’ERP, l’automatisation, l’intégration des systèmes et l’IA.",
+  "link_t": "Voir tous les articles"
+ },
+ "join": [
+  {
+   "img": "v4/real-join.jpg",
+   "alt": "Deux collaborateurs consultant une tablette",
+   "label": "Carrières",
+   "h3": "Rejoindre Navitrends",
+   "p": "Intégrez une équipe qui crée de la valeur pour les entreprises et les équipes.",
+   "link_t": "Postuler maintenant →",
+   "link_u": "rejoindre-navitrends"
+  },
+  {
+   "img": "v4/real-join-2.jpg",
+   "alt": "Partenaires échangeant autour d’un projet",
+   "label": "Partenaires",
+   "h3": "Devenir partenaire Navitrends",
+   "p": "Développons ensemble des solutions ERP, automation et IA à forte valeur ajoutée.",
+   "link_t": "Devenir partenaire →",
+   "link_u": "devenir-partenaire-navitrends"
+  }
+ ],
+ "lucky": {
+  "show": 1,
+  "label": "Un projet ?",
+  "h2": "C’est votre {{jour de chance}}",
+  "sub": "Grattez ici pour découvrir ce que Navitrends fait pour ses clients.",
+  "cells": [
+   {
+    "n": "+300",
+    "t": "projets livrés"
+   },
+   {
+    "n": "+50",
+    "t": "workflows déployés"
+   },
+   {
+    "n": "4 zones",
+    "t": "Tunisie, Europe, UK, Moyen-Orient"
+   }
+  ]
+ },
+ "cta": {
+  "label": "Newsletter",
+  "h2": "Inscrivez-vous à notre {{newsletter}}",
+  "p": "Prêt à donner vie à vos ambitions digitales ? Recevez nos analyses ERP, automation et IA."
+ }
+}

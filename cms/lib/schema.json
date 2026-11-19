@@ -1,0 +1,1424 @@
+{
+    "schema": {
+        "hero": [
+            {
+                "k": "h1",
+                "t": "t",
+                "l": "Titre principal (H1)",
+                "h": "Laisser vide pour reprendre le titre de la page."
+            },
+            {
+                "k": "label",
+                "t": "t",
+                "l": "Petit titre au-dessus (étiquette)"
+            },
+            {
+                "k": "tagline",
+                "t": "area",
+                "l": "Phrase d’accroche"
+            },
+            {
+                "k": "intro",
+                "t": "para",
+                "l": "Introduction (une ligne vide sépare les paragraphes)"
+            },
+            {
+                "k": "actions",
+                "t": "check",
+                "l": "Afficher les boutons « Demander un devis » / « Nous contacter »"
+            },
+            {
+                "k": "theme",
+                "t": "select",
+                "l": "Couleur de la page",
+                "o": {
+                    "blue": "Bleu",
+                    "mint": "Vert menthe",
+                    "gold": "Doré",
+                    "lilac": "Lilas",
+                    "sky": "Bleu ciel",
+                    "rose": "Rose"
+                }
+            },
+            {
+                "k": "icon",
+                "t": "select",
+                "l": "Icône de l’illustration",
+                "o": {
+                    "": "— aucune illustration —",
+                    "bolt": "Éclair",
+                    "chart": "Graphique",
+                    "check": "Coche",
+                    "link": "Lien",
+                    "heart": "Cœur",
+                    "star": "Étoile",
+                    "cursor": "Curseur",
+                    "target": "Cible"
+                }
+            },
+            {
+                "k": "banner",
+                "t": "t",
+                "l": "Phrase de l’illustration"
+            },
+            {
+                "k": "tags",
+                "t": "lines",
+                "l": "Pastilles de l’illustration (3 maximum, une par ligne)"
+            }
+        ],
+        "service": [
+            {
+                "k": "short",
+                "t": "t",
+                "l": "Nom court (menu et pied de page)",
+                "h": "Ex. : ERP & Systèmes de gestion"
+            },
+            {
+                "k": "sub",
+                "t": "t",
+                "l": "Sous-titre (menu, cartes)",
+                "h": "Ex. : Odoo · Dolibarr · ERPNext"
+            },
+            {
+                "k": "card_title",
+                "t": "t",
+                "l": "Titre de la carte (accueil et page « Services »)"
+            },
+            {
+                "k": "card_tag",
+                "t": "t",
+                "l": "Sous-titre de la carte (accueil et liste des services)"
+            },
+            {
+                "k": "card_desc",
+                "t": "area",
+                "l": "Description courte (carte de l’accueil)"
+            },
+            {
+                "k": "hub_desc",
+                "t": "area",
+                "l": "Description longue (page « Services »)"
+            },
+            {
+                "k": "mock",
+                "t": "select",
+                "l": "Maquette animée",
+                "o": {
+                    "mk-erp": "ERP (tableau de bord)",
+                    "mk-auto": "Automatisation (workflow)",
+                    "mk-dev": "Développement (mobiles)",
+                    "mk-integ": "Intégration (messages)",
+                    "mk-team": "Accompagnement (formation)",
+                    "mk-conseil": "Conseil (feuille de route)"
+                }
+            },
+            {
+                "k": "glyph",
+                "t": "t",
+                "l": "Symbole de l’icône du menu",
+                "h": "Ex. : ⚙  ⚡  { }  ⇄  ☺  ◎"
+            }
+        ],
+        "case": [
+            {
+                "k": "group",
+                "t": "t",
+                "l": "Groupe",
+                "h": "Ex. : ERPNext ou Sur mesure. Les études de cas sont regroupées par groupe."
+            },
+            {
+                "k": "theme",
+                "t": "select",
+                "l": "Couleur",
+                "o": {
+                    "blue": "Bleu",
+                    "mint": "Vert menthe",
+                    "gold": "Doré",
+                    "lilac": "Lilas",
+                    "sky": "Bleu ciel",
+                    "rose": "Rose"
+                }
+            },
+            {
+                "k": "client",
+                "t": "t",
+                "l": "Client"
+            },
+            {
+                "k": "short_name",
+                "t": "t",
+                "l": "Nom court du client (fil d’Ariane)"
+            },
+            {
+                "k": "logo",
+                "t": "image",
+                "l": "Logo du client"
+            },
+            {
+                "k": "logo_alt",
+                "t": "t",
+                "l": "Texte alternatif du logo"
+            },
+            {
+                "k": "logo_dark",
+                "t": "check",
+                "l": "Fond sombre derrière le logo"
+            },
+            {
+                "k": "kicker",
+                "t": "t",
+                "l": "Petit titre au-dessus du titre"
+            },
+            {
+                "k": "summary",
+                "t": "area",
+                "l": "Résumé (sous le titre et dans la liste)"
+            },
+            {
+                "k": "banner",
+                "t": "t",
+                "l": "Phrase de l’illustration"
+            },
+            {
+                "k": "tags",
+                "t": "lines",
+                "l": "Pastilles (3 maximum, une par ligne)"
+            }
+        ],
+        "extra": {
+            "contact": [
+                {
+                    "k": "card_h2",
+                    "t": "t",
+                    "l": "Titre de la carte des coordonnées"
+                },
+                {
+                    "k": "form_h2",
+                    "t": "t",
+                    "l": "Titre du formulaire"
+                },
+                {
+                    "k": "form_p",
+                    "t": "area",
+                    "l": "Texte sous le titre du formulaire"
+                },
+                {
+                    "k": "btn",
+                    "t": "t",
+                    "l": "Texte du bouton"
+                },
+                {
+                    "k": "ok_msg",
+                    "t": "area",
+                    "l": "Message affiché après l’envoi"
+                },
+                {
+                    "k": "form_note",
+                    "t": "area",
+                    "l": "Note sous le formulaire"
+                },
+                {
+                    "k": "subject",
+                    "t": "t",
+                    "l": "Objet de l’e-mail reçu"
+                }
+            ],
+            "devis": [
+                {
+                    "k": "why_h2",
+                    "t": "t",
+                    "l": "Titre de la carte « Pourquoi »"
+                },
+                {
+                    "k": "why_list",
+                    "t": "lines",
+                    "l": "Arguments (un par ligne)"
+                },
+                {
+                    "k": "steps_h2",
+                    "t": "t",
+                    "l": "Titre de la carte « Étapes »"
+                },
+                {
+                    "k": "steps_list",
+                    "t": "lines",
+                    "l": "Étapes (une par ligne)"
+                },
+                {
+                    "k": "form_h2",
+                    "t": "t",
+                    "l": "Titre du formulaire"
+                },
+                {
+                    "k": "form_p",
+                    "t": "area",
+                    "l": "Texte sous le titre du formulaire"
+                },
+                {
+                    "k": "services",
+                    "t": "lines",
+                    "l": "Choix de la liste « Services » (un par ligne)"
+                },
+                {
+                    "k": "btn",
+                    "t": "t",
+                    "l": "Texte du bouton"
+                },
+                {
+                    "k": "ok_msg",
+                    "t": "area",
+                    "l": "Message affiché après l’envoi"
+                },
+                {
+                    "k": "subject",
+                    "t": "t",
+                    "l": "Objet de l’e-mail reçu"
+                }
+            ]
+        },
+        "sections": {
+            "numbered": {
+                "l": "Bloc numéroté (texte)",
+                "f": [
+                    {
+                        "k": "n",
+                        "t": "t",
+                        "l": "Numéro",
+                        "h": "Laisser vide pour une numérotation automatique."
+                    },
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "ps",
+                        "t": "para",
+                        "l": "Paragraphes"
+                    },
+                    {
+                        "k": "list",
+                        "t": "lines",
+                        "l": "Liste à puces (une ligne = une puce)"
+                    },
+                    {
+                        "k": "quote",
+                        "t": "area",
+                        "l": "Citation mise en avant"
+                    },
+                    {
+                        "k": "after",
+                        "t": "para",
+                        "l": "Paragraphes après la liste"
+                    },
+                    {
+                        "k": "after_list",
+                        "t": "lines",
+                        "l": "Seconde liste à puces"
+                    },
+                    {
+                        "k": "panel",
+                        "t": "check",
+                        "l": "Fond coloré (encadré)"
+                    },
+                    {
+                        "k": "id",
+                        "t": "t",
+                        "l": "Ancre (optionnel)",
+                        "h": "Identifiant pour un lien interne (#ancre). Lettres, chiffres et tirets."
+                    }
+                ]
+            },
+            "text": {
+                "l": "Texte libre",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette (petit titre)"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction"
+                    },
+                    {
+                        "k": "ps",
+                        "t": "para",
+                        "l": "Paragraphes"
+                    },
+                    {
+                        "k": "id",
+                        "t": "t",
+                        "l": "Ancre (optionnel)",
+                        "h": "Identifiant pour un lien interne (#ancre). Lettres, chiffres et tirets."
+                    }
+                ]
+            },
+            "steps": {
+                "l": "Étapes (cartes empilées)",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette (petit titre)"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction"
+                    },
+                    {
+                        "k": "items",
+                        "t": "rows",
+                        "l": "Étapes",
+                        "tk": "t",
+                        "add": "Ajouter une étape",
+                        "f": [
+                            {
+                                "k": "t",
+                                "t": "t",
+                                "l": "Titre de l’étape"
+                            },
+                            {
+                                "k": "body",
+                                "t": "variants",
+                                "l": "Contenu",
+                                "vk": "type",
+                                "add": "Ajouter un élément",
+                                "v": {
+                                    "p": {
+                                        "l": "Paragraphe",
+                                        "f": [
+                                            {
+                                                "k": "text",
+                                                "t": "area",
+                                                "l": "Texte"
+                                            }
+                                        ]
+                                    },
+                                    "ul": {
+                                        "l": "Liste à puces",
+                                        "f": [
+                                            {
+                                                "k": "items",
+                                                "t": "lines",
+                                                "l": "Éléments (un par ligne)"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "k": "goal",
+                                "t": "t",
+                                "l": "Objectif (ligne en gras en bas)"
+                            }
+                        ]
+                    },
+                    {
+                        "k": "id",
+                        "t": "t",
+                        "l": "Ancre (optionnel)",
+                        "h": "Identifiant pour un lien interne (#ancre). Lettres, chiffres et tirets."
+                    }
+                ]
+            },
+            "cards": {
+                "l": "Cartes colorées",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette (petit titre)"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction"
+                    },
+                    {
+                        "k": "cols",
+                        "t": "select",
+                        "l": "Colonnes",
+                        "o": {
+                            "2": "2 colonnes",
+                            "3": "3 colonnes",
+                            "4": "4 colonnes"
+                        }
+                    },
+                    {
+                        "k": "items",
+                        "t": "rows",
+                        "l": "Cartes",
+                        "tk": "t",
+                        "add": "Ajouter une carte",
+                        "f": [
+                            {
+                                "k": "t",
+                                "t": "t",
+                                "l": "Titre"
+                            },
+                            {
+                                "k": "d",
+                                "t": "area",
+                                "l": "Texte"
+                            },
+                            {
+                                "k": "list",
+                                "t": "lines",
+                                "l": "Liste à puces (optionnel)"
+                            }
+                        ]
+                    },
+                    {
+                        "k": "outro",
+                        "t": "area",
+                        "l": "Texte de conclusion"
+                    },
+                    {
+                        "k": "id",
+                        "t": "t",
+                        "l": "Ancre (optionnel)",
+                        "h": "Identifiant pour un lien interne (#ancre). Lettres, chiffres et tirets."
+                    }
+                ]
+            },
+            "tiles": {
+                "l": "Liste de points (tuiles)",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette (petit titre)"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction"
+                    },
+                    {
+                        "k": "items",
+                        "t": "lines",
+                        "l": "Points (un par ligne)"
+                    },
+                    {
+                        "k": "numbered",
+                        "t": "check",
+                        "l": "Numéroter (sinon coche)"
+                    },
+                    {
+                        "k": "outro",
+                        "t": "area",
+                        "l": "Texte de conclusion"
+                    },
+                    {
+                        "k": "id",
+                        "t": "t",
+                        "l": "Ancre (optionnel)",
+                        "h": "Identifiant pour un lien interne (#ancre). Lettres, chiffres et tirets."
+                    }
+                ]
+            },
+            "who": {
+                "l": "Deux encadrés (sombre / clair)",
+                "f": [
+                    {
+                        "k": "a_h2",
+                        "t": "t",
+                        "l": "Encadré sombre : titre"
+                    },
+                    {
+                        "k": "a_lead",
+                        "t": "area",
+                        "l": "Encadré sombre : texte"
+                    },
+                    {
+                        "k": "a_list",
+                        "t": "lines",
+                        "l": "Encadré sombre : liste"
+                    },
+                    {
+                        "k": "b_h2",
+                        "t": "t",
+                        "l": "Encadré clair : titre"
+                    },
+                    {
+                        "k": "b_lead",
+                        "t": "area",
+                        "l": "Encadré clair : texte"
+                    },
+                    {
+                        "k": "b_list",
+                        "t": "lines",
+                        "l": "Encadré clair : liste"
+                    },
+                    {
+                        "k": "id",
+                        "t": "t",
+                        "l": "Ancre (optionnel)",
+                        "h": "Identifiant pour un lien interne (#ancre). Lettres, chiffres et tirets."
+                    }
+                ]
+            },
+            "bad": {
+                "l": "Encadré « ce que nous ne faisons pas »",
+                "f": [
+                    {
+                        "k": "lead",
+                        "t": "area",
+                        "l": "Introduction"
+                    },
+                    {
+                        "k": "list",
+                        "t": "lines",
+                        "l": "Éléments (un par ligne)"
+                    }
+                ]
+            },
+            "why": {
+                "l": "Avant / Après (deux colonnes)",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "leadA",
+                        "t": "area",
+                        "l": "Colonne 1 : introduction"
+                    },
+                    {
+                        "k": "problems",
+                        "t": "lines",
+                        "l": "Colonne 1 : éléments"
+                    },
+                    {
+                        "k": "leadB",
+                        "t": "area",
+                        "l": "Colonne 2 : introduction"
+                    },
+                    {
+                        "k": "gains",
+                        "t": "lines",
+                        "l": "Colonne 2 : éléments"
+                    }
+                ]
+            },
+            "marquee": {
+                "l": "Bandeau défilant de mots-clés",
+                "f": [
+                    {
+                        "k": "items",
+                        "t": "lines",
+                        "l": "Mots-clés (un par ligne)"
+                    }
+                ]
+            },
+            "panel": {
+                "l": "Encadré de synthèse centré",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "p",
+                        "t": "area",
+                        "l": "Texte"
+                    }
+                ]
+            },
+            "close": {
+                "l": "Grand encadré de conclusion (fond sombre)",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "ps",
+                        "t": "para",
+                        "l": "Paragraphes"
+                    },
+                    {
+                        "k": "cta_t",
+                        "t": "t",
+                        "l": "Phrase d’appel (gras)"
+                    },
+                    {
+                        "k": "cta_p",
+                        "t": "t",
+                        "l": "Phrase d’appel (suite)"
+                    },
+                    {
+                        "k": "nobtn",
+                        "t": "check",
+                        "l": "Ne pas afficher de boutons"
+                    },
+                    {
+                        "k": "btn1_t",
+                        "t": "t",
+                        "l": "Bouton 1 : texte",
+                        "h": "Vide = « Demander un devis »"
+                    },
+                    {
+                        "k": "btn1_u",
+                        "t": "t",
+                        "l": "Bouton 1 : lien",
+                        "h": "Adresse (https://…) ou identifiant d’une page (ex. contact). Vide = page Devis."
+                    },
+                    {
+                        "k": "btn2_t",
+                        "t": "t",
+                        "l": "Bouton 2 : texte",
+                        "h": "Vide = « Nous contacter »"
+                    },
+                    {
+                        "k": "btn2_u",
+                        "t": "t",
+                        "l": "Bouton 2 : lien"
+                    },
+                    {
+                        "k": "id",
+                        "t": "t",
+                        "l": "Ancre (optionnel)",
+                        "h": "Identifiant pour un lien interne (#ancre). Lettres, chiffres et tirets."
+                    }
+                ]
+            },
+            "cta": {
+                "l": "Appel à l’action (boutons Devis / Contact)",
+                "f": [
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "p",
+                        "t": "area",
+                        "l": "Texte"
+                    }
+                ]
+            },
+            "html": {
+                "l": "Code HTML libre",
+                "f": [
+                    {
+                        "k": "html",
+                        "t": "area",
+                        "l": "HTML",
+                        "rows": 10
+                    }
+                ]
+            }
+        },
+        "home": [
+            {
+                "k": "hero",
+                "t": "group",
+                "l": "1 · Bandeau d’accueil",
+                "f": [
+                    {
+                        "k": "badge",
+                        "t": "t",
+                        "l": "Pastille au-dessus du titre"
+                    },
+                    {
+                        "k": "h1",
+                        "t": "t",
+                        "l": "Titre (début de phrase)"
+                    },
+                    {
+                        "k": "typed",
+                        "t": "lines",
+                        "l": "Mots qui s’écrivent à la fin du titre (un par ligne)"
+                    },
+                    {
+                        "k": "lead",
+                        "t": "area",
+                        "l": "Texte d’introduction"
+                    },
+                    {
+                        "k": "btn1_t",
+                        "t": "t",
+                        "l": "Bouton 1 : texte"
+                    },
+                    {
+                        "k": "btn1_u",
+                        "t": "t",
+                        "l": "Bouton 1 : lien (page ou adresse)"
+                    },
+                    {
+                        "k": "btn2_t",
+                        "t": "t",
+                        "l": "Bouton 2 : texte"
+                    },
+                    {
+                        "k": "btn2_u",
+                        "t": "t",
+                        "l": "Bouton 2 : lien (page ou adresse)"
+                    },
+                    {
+                        "k": "marquee",
+                        "t": "lines",
+                        "l": "Bandeau défilant (un mot par ligne)"
+                    }
+                ]
+            },
+            {
+                "k": "stats",
+                "t": "rows",
+                "l": "2 · Chiffres clés",
+                "tk": "text",
+                "add": "Ajouter un chiffre",
+                "f": [
+                    {
+                        "k": "pre",
+                        "t": "t",
+                        "l": "Avant le chiffre (ex. +)"
+                    },
+                    {
+                        "k": "to",
+                        "t": "t",
+                        "l": "Chiffre"
+                    },
+                    {
+                        "k": "suf",
+                        "t": "t",
+                        "l": "Après le chiffre (ex. %)"
+                    },
+                    {
+                        "k": "text",
+                        "t": "t",
+                        "l": "Légende"
+                    }
+                ]
+            },
+            {
+                "k": "services",
+                "t": "group",
+                "l": "3 · Services (les cartes viennent des pages « Service »)",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre",
+                        "h": "Entourer des mots de {{ }} pour les afficher en dégradé de couleur."
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction",
+                        "h": "**mot** met le texte en gras."
+                    }
+                ]
+            },
+            {
+                "k": "change",
+                "t": "group",
+                "l": "4 · « Le monde change » (3 grands blocs)",
+                "f": [
+                    {
+                        "k": "show",
+                        "t": "check",
+                        "l": "Afficher cette section"
+                    },
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre",
+                        "h": "Entourer des mots de {{ }} pour les afficher en dégradé de couleur."
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction",
+                        "h": "**mot** met le texte en gras."
+                    },
+                    {
+                        "k": "rows",
+                        "t": "rows",
+                        "l": "Blocs",
+                        "tk": "h3",
+                        "add": "Ajouter un bloc",
+                        "f": [
+                            {
+                                "k": "color",
+                                "t": "select",
+                                "l": "Couleur",
+                                "o": {
+                                    "blue": "Bleu",
+                                    "mint": "Vert menthe",
+                                    "gold": "Doré",
+                                    "lilac": "Lilas",
+                                    "sky": "Bleu ciel",
+                                    "rose": "Rose"
+                                }
+                            },
+                            {
+                                "k": "rev",
+                                "t": "check",
+                                "l": "Image à gauche"
+                            },
+                            {
+                                "k": "vis",
+                                "t": "select",
+                                "l": "Illustration sur l’image",
+                                "o": {
+                                    "flow": "Workflow",
+                                    "card": "Tableau de bord",
+                                    "steps": "Feuille de route"
+                                }
+                            },
+                            {
+                                "k": "small",
+                                "t": "t",
+                                "l": "Petit titre"
+                            },
+                            {
+                                "k": "h3",
+                                "t": "t",
+                                "l": "Titre"
+                            },
+                            {
+                                "k": "list",
+                                "t": "lines",
+                                "l": "Points (un par ligne)"
+                            },
+                            {
+                                "k": "link_t",
+                                "t": "t",
+                                "l": "Lien : texte"
+                            },
+                            {
+                                "k": "link_u",
+                                "t": "t",
+                                "l": "Lien : page ou adresse"
+                            },
+                            {
+                                "k": "img",
+                                "t": "image",
+                                "l": "Image"
+                            },
+                            {
+                                "k": "alt",
+                                "t": "t",
+                                "l": "Texte alternatif de l’image"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "k": "approach",
+                "t": "group",
+                "l": "5 · Notre approche (onglets)",
+                "f": [
+                    {
+                        "k": "show",
+                        "t": "check",
+                        "l": "Afficher cette section"
+                    },
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre",
+                        "h": "Entourer des mots de {{ }} pour les afficher en dégradé de couleur."
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction",
+                        "h": "**mot** met le texte en gras."
+                    },
+                    {
+                        "k": "tabs",
+                        "t": "rows",
+                        "l": "Onglets",
+                        "tk": "tab",
+                        "add": "Ajouter un onglet",
+                        "f": [
+                            {
+                                "k": "tab",
+                                "t": "t",
+                                "l": "Nom de l’onglet"
+                            },
+                            {
+                                "k": "h3",
+                                "t": "t",
+                                "l": "Titre"
+                            },
+                            {
+                                "k": "p",
+                                "t": "area",
+                                "l": "Texte"
+                            },
+                            {
+                                "k": "btn_t",
+                                "t": "t",
+                                "l": "Bouton : texte"
+                            },
+                            {
+                                "k": "btn_u",
+                                "t": "t",
+                                "l": "Bouton : page ou adresse"
+                            },
+                            {
+                                "k": "steps",
+                                "t": "lines",
+                                "l": "Étapes (une par ligne)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "k": "tools",
+                "t": "group",
+                "l": "6 · Expertise (bandeaux défilants)",
+                "f": [
+                    {
+                        "k": "show",
+                        "t": "check",
+                        "l": "Afficher cette section"
+                    },
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre",
+                        "h": "Entourer des mots de {{ }} pour les afficher en dégradé de couleur."
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction",
+                        "h": "**mot** met le texte en gras."
+                    },
+                    {
+                        "k": "m1",
+                        "t": "lines",
+                        "l": "Bandeau 1 (un mot par ligne)"
+                    },
+                    {
+                        "k": "m2",
+                        "t": "lines",
+                        "l": "Bandeau 2 (un mot par ligne)"
+                    }
+                ]
+            },
+            {
+                "k": "about",
+                "t": "group",
+                "l": "7 · À propos",
+                "f": [
+                    {
+                        "k": "img",
+                        "t": "image",
+                        "l": "Image"
+                    },
+                    {
+                        "k": "alt",
+                        "t": "t",
+                        "l": "Texte alternatif de l’image"
+                    },
+                    {
+                        "k": "stick_n",
+                        "t": "t",
+                        "l": "Pastille : chiffre"
+                    },
+                    {
+                        "k": "stick_t",
+                        "t": "t",
+                        "l": "Pastille : texte"
+                    },
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction"
+                    },
+                    {
+                        "k": "ps",
+                        "t": "para",
+                        "l": "Paragraphes"
+                    },
+                    {
+                        "k": "list",
+                        "t": "lines",
+                        "l": "Points (un par ligne)"
+                    },
+                    {
+                        "k": "btn_t",
+                        "t": "t",
+                        "l": "Bouton : texte"
+                    },
+                    {
+                        "k": "btn_u",
+                        "t": "t",
+                        "l": "Bouton : page ou adresse"
+                    }
+                ]
+            },
+            {
+                "k": "cases",
+                "t": "group",
+                "l": "8 · Réalisations (les cartes viennent des « Études de cas »)",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre",
+                        "h": "Entourer des mots de {{ }} pour les afficher en dégradé de couleur."
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction",
+                        "h": "**mot** met le texte en gras."
+                    },
+                    {
+                        "k": "link_t",
+                        "t": "t",
+                        "l": "Lien : texte"
+                    }
+                ]
+            },
+            {
+                "k": "presence",
+                "t": "group",
+                "l": "9 · Présence internationale (adresses : voir Réglages)",
+                "f": [
+                    {
+                        "k": "show",
+                        "t": "check",
+                        "l": "Afficher cette section"
+                    },
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "p",
+                        "t": "area",
+                        "l": "Texte"
+                    }
+                ]
+            },
+            {
+                "k": "blog",
+                "t": "group",
+                "l": "10 · Blog (les articles viennent des « Articles »)",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre",
+                        "h": "Entourer des mots de {{ }} pour les afficher en dégradé de couleur."
+                    },
+                    {
+                        "k": "intro",
+                        "t": "area",
+                        "l": "Texte d’introduction",
+                        "h": "**mot** met le texte en gras."
+                    },
+                    {
+                        "k": "link_t",
+                        "t": "t",
+                        "l": "Lien : texte"
+                    }
+                ]
+            },
+            {
+                "k": "join",
+                "t": "rows",
+                "l": "11 · Rejoindre / Partenaire (2 cartes)",
+                "tk": "h3",
+                "add": "Ajouter une carte",
+                "f": [
+                    {
+                        "k": "img",
+                        "t": "image",
+                        "l": "Image"
+                    },
+                    {
+                        "k": "alt",
+                        "t": "t",
+                        "l": "Texte alternatif"
+                    },
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h3",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "p",
+                        "t": "area",
+                        "l": "Texte"
+                    },
+                    {
+                        "k": "link_t",
+                        "t": "t",
+                        "l": "Lien : texte"
+                    },
+                    {
+                        "k": "link_u",
+                        "t": "t",
+                        "l": "Lien : page ou adresse"
+                    }
+                ]
+            },
+            {
+                "k": "lucky",
+                "t": "group",
+                "l": "12 · « Jour de chance » (carte à gratter)",
+                "f": [
+                    {
+                        "k": "show",
+                        "t": "check",
+                        "l": "Afficher cette section"
+                    },
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "sub",
+                        "t": "area",
+                        "l": "Texte"
+                    },
+                    {
+                        "k": "cells",
+                        "t": "rows",
+                        "l": "Cases cachées",
+                        "tk": "n",
+                        "add": "Ajouter une case",
+                        "f": [
+                            {
+                                "k": "n",
+                                "t": "t",
+                                "l": "Chiffre"
+                            },
+                            {
+                                "k": "t",
+                                "t": "t",
+                                "l": "Texte"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "k": "cta",
+                "t": "group",
+                "l": "13 · Newsletter (bas de toutes les pages)",
+                "f": [
+                    {
+                        "k": "label",
+                        "t": "t",
+                        "l": "Étiquette"
+                    },
+                    {
+                        "k": "h2",
+                        "t": "t",
+                        "l": "Titre"
+                    },
+                    {
+                        "k": "p",
+                        "t": "area",
+                        "l": "Texte"
+                    }
+                ]
+            }
+        ]
+    },
+    "types": {
+        "default": "Page standard (bandeau + sections)",
+        "service": "Page service (maquette + sections)",
+        "hub": "Liste des services (cartes automatiques)",
+        "contact": "Contact (coordonnées + formulaire)",
+        "devis": "Demande de devis (formulaire)",
+        "faq": "FAQ (questions de « FAQ »)",
+        "insights": "Insights (liste des articles)"
+    },
+    "extraDefaults": {
+        "contact": {
+            "card_h2": "Nos coordonnées",
+            "form_h2": "Nous contacter",
+            "form_p": "Nos interventions s’adressent aux dirigeants, responsables IT et équipes métiers souhaitant des solutions durables, mesurables et adaptées à leur réalité opérationnelle.",
+            "form_note": "Navitrends est une société de services IT spécialisée en ERP, automatisation, intégration de systèmes et transformation digitale pour les entreprises en Tunisie, en France et au Royaume-Uni.",
+            "btn": "Envoyer le message",
+            "ok_msg": "Merci, votre message a bien été envoyé. Nous vous répondons dans les meilleurs délais.",
+            "subject": "Contact via navitrends.com"
+        },
+        "devis": {
+            "why_h2": "Pourquoi choisir Navitrends ?",
+            "why_list": [
+                "Des services de développement web et mobile personnalisés.",
+                "Des logiciels de gestion (ERP, CRM) pour simplifier vos opérations.",
+                "Des stratégies SEO pour renforcer votre visibilité en ligne.",
+                "Une expertise dédiée aux solutions SaaS et aux outils numériques pour l’export."
+            ],
+            "steps_h2": "Comment obtenir votre devis personnalisé ?",
+            "steps_list": [
+                "Remplissez le formulaire en détaillant vos besoins.",
+                "Notre équipe analysera vos attentes et vous proposera une solution adaptée.",
+                "Recevez votre devis gratuitement et sans engagement dans les plus brefs délais."
+            ],
+            "form_h2": "Demandez un devis",
+            "form_p": "Merci de compléter les champs ci-dessous. Prêt à transformer vos idées en réalité ? Contactez-nous dès aujourd’hui !",
+            "services": [
+                "Développement mobile",
+                "Développement back-end",
+                "Développement front-end",
+                "Développement d’IA",
+                "Intégration de systèmes",
+                "Marketing digital"
+            ],
+            "btn": "Envoyer la demande",
+            "ok_msg": "Merci, votre demande de devis a bien été envoyée. Nous revenons vers vous dans les meilleurs délais.",
+            "subject": "Demande de devis via navitrends.com"
+        }
+    },
+    "settingsFields": {
+        "tn_name": "Navitrends Tunisie",
+        "tn_address": "15 avenue Farhat Hached, B13 1ère étage\nImmeuble Amina 2080 Ariana",
+        "tn_email": "commercial@navitrends.com",
+        "tn_phone": "(+216) 58 188 873",
+        "tn_tel": "+21658188873",
+        "uk_name": "Navitrends Royaume-Uni",
+        "uk_address": "NAVITRENDS LTD, 5 Brayford Square\nLondres, Royaume-Uni E1 0SG",
+        "uk_email": "contact@navitrends.uk",
+        "uk_phone": "+447418361296",
+        "uk_tel": "+447418361296",
+        "facebook": "https://www.facebook.com/navitrends.tn",
+        "linkedin": "https://www.linkedin.com/company/navitrends/",
+        "stages_url": "https://stage.navitrends.com/",
+        "form_to": "commercial@navitrends.com",
+        "wordmark": "Navitrends",
+        "footer_p1": "Navitrends accompagne les entreprises dans leur transformation digitale à travers l’intégration d’ERP, l’automatisation des processus métiers, le développement de solutions sur mesure et le conseil en organisation.",
+        "footer_p2": "Implantée en Tunisie et au Royaume-Uni, Navitrends intervient auprès des PME, industriels et organisations ambitieuses en Tunisie, en Europe et au Moyen-Orient.",
+        "legal_1": "© 2026 Navitrends – Digital Engineering & Business Automation",
+        "legal_2": "Creating value for businesses and teams",
+        "seo_home_title": "Société Navitrends – ERP, Automation & IA pour la performance des entreprises",
+        "seo_home_desc": "Navitrends accompagne les entreprises en Tunisie, en Europe et au Moyen-Orient : intégration ERP (Odoo, Dolibarr, ERPNext), automatisation des processus (APA), IA et développement sur mesure.",
+        "org_desc": "Digital Engineering & Business Automation : ERP, automatisation des processus, IA, intégration de systèmes et développement sur mesure.",
+        "org_logo": "",
+        "cases_label": "Travaux",
+        "cases_h1": "Nos réalisations",
+        "cases_tag": "Des projets innovants qui témoignent de notre expertise et de notre engagement envers la réussite de nos clients.",
+        "cases_intro": "ERPNext, digitalisation industrielle, logiciels sur mesure : les défis rencontrés, les solutions conçues et les résultats visés.",
+        "blog_label": "Blog",
+        "blog_h1": "Expertise digitale Navitrends",
+        "blog_tag": "Analyses, retours d’expérience et bonnes pratiques sur l’ERP, l’automatisation, l’intégration des systèmes et l’IA."
+    },
+    "themes": {
+        "blue": "Bleu",
+        "mint": "Vert menthe",
+        "gold": "Doré",
+        "lilac": "Lilas",
+        "sky": "Bleu ciel",
+        "rose": "Rose"
+    }
+}

@@ -1,0 +1,8 @@
+data/users.json
+data/secret.key
+data/requests.json
+data/backups/
+uploads/
+site/
+site.new/
+site.old/

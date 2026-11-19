@@ -1,0 +1,14 @@
+{
+  "name": "navitrends-cms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site Navitrends + back-office (/backoffice) — sans dépendance, Node.js 18+",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js",
+    "publish": "node lib/publish.js",
+    "check": "node tools/cmp.js"
+  },
+  "engines": { "node": ">=18" }
+}

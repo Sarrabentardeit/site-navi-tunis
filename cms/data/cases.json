@@ -1,0 +1,468 @@
+[
+ {
+  "slug": "imc-metrology",
+  "title": "IMC Métrologie : planifier un laboratoire sans papier avec ERPNext",
+  "order": 0,
+  "status": "publish",
+  "case": {
+   "group": "ERPNext",
+   "theme": "blue",
+   "client": "IMC Métrologie",
+   "short_name": "IMC Métrologie",
+   "logo": "v4/cases/imc-metrology.png",
+   "logo_alt": "Logo IMC Métrologie",
+   "logo_dark": 0,
+   "kicker": "Étude de cas / Digitalisation d’un laboratoire de métrologie",
+   "summary": "Un programme de transformation digitale structuré visant à intégrer les enregistrements de laboratoire, les processus de métrologie et la gestion de la qualité dans un environnement plus connecté et traçable.",
+   "banner": "Un laboratoire connecté et sans papier",
+   "tags": [
+    "Laboratoire de métrologie",
+    "ERPNext & gestion documentaire",
+    "Processus alignés ISO"
+   ]
+  },
+  "sections": [
+   {
+    "type": "numbered",
+    "n": "01",
+    "label": "Vue d’ensemble",
+    "id": "apercu",
+    "h2": "Une feuille de route ERPNext pour un laboratoire de métrologie sans papier",
+    "ps": [
+     "IMC Métrologie est un laboratoire spécialisé dans l’étalonnage, la vérification et les services de mesure associés. L’organisation a lancé un programme pour réduire sa dépendance au papier et renforcer la gestion de ses informations de laboratoire.",
+     "NaviTrends a préparé une feuille de route de digitalisation par phases, centrée sur ERPNext, avec une gestion documentaire connectée et des processus conçus autour des exigences de traçabilité et de qualité. Le document source décrit le périmètre visé ; il n’établit pas que chaque phase a été livrée."
+    ]
+   },
+   {
+    "type": "numbered",
+    "n": "02",
+    "label": "Le défi",
+    "id": "enjeu",
+    "panel": true,
+    "h2": "Faciliter la gestion des enregistrements, des validations et des preuves qualité",
+    "ps": [
+     "Les laboratoires de métrologie ont besoin d’enregistrements fiables tout au long du cycle de vie d’une prestation de mesure, de la réception de l’équipement aux travaux techniques, jusqu’aux certificats et à la communication client. Les documents papier et les systèmes séparés peuvent rendre l’information plus difficile à retrouver, à relire et à auditer.",
+     "Pour IMC Métrologie, l’objectif était d’établir une manière de travailler numérique plus cohérente, tout en soutenant la documentation et la traçabilité attendues dans un contexte ISO/IEC 17025 et ISO 10012."
+    ]
+   },
+   {
+    "type": "cards",
+    "cols": "3",
+    "label": "03 · Notre approche",
+    "h2": "Une approche par phases d’ERPNext et de workflows sans papier",
+    "intro": "La feuille de route rassemble les processus ERP de base, la gestion documentaire contrôlée et des workflows qualité propres au laboratoire. Elle distingue la mise en place des fondations des capacités prévues pour les phases suivantes.",
+    "id": "approche",
+    "pt": 60,
+    "items": [
+     {
+      "t": "Workflows ERP centralisés",
+      "d": "Utiliser ERPNext comme socle proposé des processus métier et d’enregistrements opérationnels cohérents.",
+      "list": []
+     },
+     {
+      "t": "Gestion documentaire sans papier",
+      "d": "Prévoir le stockage structuré des documents, le versioning et l’accès aux certificats et pièces justificatives.",
+      "list": []
+     },
+     {
+      "t": "Traçabilité métrologique et qualité",
+      "d": "Définir des workflows pour le suivi des équipements, la documentation d’étalonnage, les non-conformités et la préparation des audits.",
+      "list": []
+     }
+    ]
+   },
+   {
+    "type": "close",
+    "label": "04 · Valeur métier",
+    "h2": "Une base pour des opérations de laboratoire plus traçables",
+    "ps": [
+     "La transformation proposée vise à donner à IMC Métrologie un cadre plus clair pour gérer les enregistrements de laboratoire, les processus qualité et la documentation destinée aux clients. Une approche centralisée pourrait faciliter la recherche d’information et aider les équipes à préparer les éléments de preuve pour les revues qualité.",
+     "Ce sont des bénéfices attendus de la feuille de route documentée, et non des résultats vérifiés après mise en œuvre. Aucun gain de temps, certification ou amélioration de performance n’est attribué au projet."
+    ],
+    "nobtn": true,
+    "id": "valeur"
+   },
+   {
+    "type": "cta",
+    "h2": "Vous envisagez une transformation sans papier pour votre laboratoire ?",
+    "p": "Parlez à NaviTrends d’ERPNext, de gestion documentaire et d’approches concrètes pour digitaliser des workflows orientés qualité."
+   }
+  ],
+  "seo": {
+   "title": "",
+   "desc": ""
+  }
+ },
+ {
+  "slug": "mpack-manufacturing",
+  "title": "ERPNext pour l’industrie : connecter les opérations d’usine et les données machines",
+  "order": 1,
+  "status": "publish",
+  "case": {
+   "group": "ERPNext",
+   "theme": "mint",
+   "client": "MPACK — Nord PVC Industrie",
+   "short_name": "MPACK",
+   "logo": "v4/cases/mpack-manufacturing.png",
+   "logo_alt": "Logo Nord PVC Industrie",
+   "logo_dark": 0,
+   "kicker": "Étude de cas / Digitalisation industrielle",
+   "summary": "Un projet de digitalisation industrielle qui rapproche la gestion de l’entreprise et la collecte automatisée des données de production dans un environnement de travail plus connecté.",
+   "banner": "Des données machines isolées à des opérations connectées",
+   "tags": [
+    "Production industrielle",
+    "ERPNext & supervision des machines"
+   ]
+  },
+  "sections": [
+   {
+    "type": "numbered",
+    "n": "01",
+    "label": "Vue d’ensemble",
+    "id": "apercu",
+    "h2": "Une implémentation ERPNext reliant la production et les opérations de l’entreprise",
+    "ps": [
+     "Le projet portait sur un environnement de production industrielle où la gestion quotidienne de l’activité et les informations générées par les équipements de fabrication devaient mieux fonctionner ensemble.",
+     "NaviTrends a développé une approche centrée sur ERPNext pour organiser les opérations d’usine en parallèle d’une collecte automatisée des données machines, rendant l’information de production plus accessible dans un contexte opérationnel plus large."
+    ]
+   },
+   {
+    "type": "numbered",
+    "n": "02",
+    "label": "Le défi",
+    "id": "enjeu",
+    "panel": true,
+    "h2": "Intégrer l’information de production à la vision opérationnelle",
+    "ps": [
+     "Les équipes d’usine doivent coordonner stock, production, qualité et maintenance tout en suivant ce qui se passe sur la ligne de production. Quand les informations machines et les processus métier sont traités séparément, il devient difficile de maintenir une vision cohérente des opérations.",
+     "Le défi consistait à relier la gestion des activités industrielles à la supervision au niveau des machines, afin que les données de production soient collectées de façon cohérente et servent au suivi opérationnel."
+    ]
+   },
+   {
+    "type": "cards",
+    "cols": "3",
+    "label": "03 · Notre approche",
+    "h2": "Intégration ERPNext avec supervision automatisée de la production",
+    "intro": "NaviTrends a structuré le projet autour de deux besoins connectés : gérer les activités de l’usine via ERPNext et capturer automatiquement les informations de production depuis les équipements de fabrication. Cela donne au projet une portée pratique au-delà d’une implémentation ERP classique.",
+    "id": "approche",
+    "pt": 60,
+    "items": [
+     {
+      "t": "ERPNext pour les opérations d’usine",
+      "d": "Regrouper les activités clés comme la production, le stock et la maintenance dans un environnement de gestion structuré.",
+      "list": []
+     },
+     {
+      "t": "Collecte automatisée des données machines",
+      "d": "Capter les informations de production depuis les équipements sans dépendre d’une saisie manuelle.",
+      "list": []
+     },
+     {
+      "t": "Suivi opérationnel",
+      "d": "Faciliter le suivi de l’activité des machines et des informations de production grâce à une approche de supervision connectée.",
+      "list": []
+     }
+    ]
+   },
+   {
+    "type": "close",
+    "label": "04 · Valeur métier",
+    "h2": "Une base plus solide pour le suivi et la coordination",
+    "ps": [
+     "Le projet établit une approche plus connectée des opérations industrielles en rapprochant les processus ERP et les informations de production collectées automatiquement. Les équipes peuvent travailler à partir d’un contexte opérationnel plus cohérent plutôt que de s’appuyer uniquement sur des sources d’information séparées.",
+     "Cette base soutient la visibilité sur la production, un suivi structuré et de futures améliorations pilotées par les données. Aucun gain de productivité ni réduction de défauts chiffrés n’est revendiqué."
+    ],
+    "nobtn": true,
+    "id": "valeur"
+   },
+   {
+    "type": "cta",
+    "h2": "Vous souhaitez connecter vos systèmes d’usine et vos données de production ?",
+    "p": "Parlez à NaviTrends d’ERPNext, de digitalisation industrielle et de moyens concrets de rassembler l’information opérationnelle."
+   }
+  ],
+  "seo": {
+   "title": "",
+   "desc": ""
+  }
+ },
+ {
+  "slug": "el-mecano-garage",
+  "title": "Concevoir un logiciel connecté de gestion d’atelier automobile",
+  "order": 2,
+  "status": "publish",
+  "case": {
+   "group": "Sur mesure",
+   "theme": "rose",
+   "client": "El Mecano Garage",
+   "short_name": "El Mecano Garage",
+   "logo": "v4/cases/el-mecano-garage.png",
+   "logo_alt": "Logo El Mecano Garage",
+   "logo_dark": 1,
+   "kicker": "Étude de cas / Logiciel pour atelier automobile",
+   "summary": "Un projet logiciel pour El Mecano Garage qui réunit ordres de réparation, fiches clients, planning d’atelier et workflows des techniciens sur une seule plateforme digitale.",
+   "banner": "De tâches d’atelier déconnectées à un seul workflow digital",
+   "tags": [
+    "Logiciel de gestion d’atelier automobile",
+    "Conception d’application web et mobile"
+   ]
+  },
+  "sections": [
+   {
+    "type": "numbered",
+    "n": "01",
+    "label": "Vue d’ensemble",
+    "id": "apercu",
+    "h2": "Une base digitale pour les opérations quotidiennes de l’atelier",
+    "ps": [
+     "El Mecano Garage avait besoin d’une façon plus unifiée de gérer les clients, les véhicules, les ordres de réparation et le travail administratif qui entoure chaque visite. Le cahier des charges demandait un logiciel adapté à l’activité quotidienne d’un atelier plutôt qu’un système de gestion générique.",
+     "NaviTrends a structuré une solution par phases, centrée sur une application web responsive, avec la mobilité des techniciens et un service multi-ateliers évolutif inclus dans la feuille de route produit."
+    ]
+   },
+   {
+    "type": "numbered",
+    "n": "02",
+    "label": "Le défi",
+    "id": "enjeu",
+    "panel": true,
+    "h2": "Ordres de réparation, informations clients et paperasse répartis dans des processus séparés",
+    "ps": [
+     "Le personnel de l’atelier doit coordonner les rendez-vous, affecter les travaux, garder l’historique des véhicules accessible et préparer les factures. Quand ces activités sont gérées séparément, il devient plus difficile de connaître l’état d’une réparation ou de maintenir un historique cohérent du parcours client.",
+     "Le projet devait aussi tenir compte de techniciens travaillant loin d’un bureau et d’une croissance future au-delà d’un seul atelier, sans complexifier inutilement la première version."
+    ]
+   },
+   {
+    "type": "cards",
+    "cols": "3",
+    "label": "03 · Notre approche",
+    "h2": "Une feuille de route par phases pour un logiciel d’atelier de réparation automobile",
+    "intro": "La conception de la solution a organisé les fonctionnalités requises en trois chantiers connectés :",
+    "id": "approche",
+    "pt": 60,
+    "items": [
+     {
+      "t": "Application web d’atelier",
+      "d": "Prévoir les fiches clients et véhicules, les ordres de réparation, l’état des travaux, les rendez-vous, la facturation PDF et un tableau de bord opérationnel simple.",
+      "list": []
+     },
+     {
+      "t": "Workflows mobiles pour techniciens",
+      "d": "Concevoir l’accès mobile aux travaux assignés, aux inspections numériques des véhicules, à la prise de photos, au suivi du temps et aux mises à jour d’état des réparations.",
+      "list": []
+     },
+     {
+      "t": "Plateforme d’atelier évolutive",
+      "d": "Définir une phase ultérieure SaaS multi-ateliers avec comptes d’atelier séparés, gestion des abonnements et administration centrale.",
+      "list": []
+     }
+    ]
+   },
+   {
+    "type": "close",
+    "label": "04 · Valeur métier",
+    "h2": "Une voie claire vers des opérations de réparation mieux coordonnées",
+    "ps": [
+     "La plateforme proposée crée une base pratique pour gérer en un seul endroit les ordres de réparation, les informations clients et véhicules, les rendez-vous et la facturation. Une vue opérationnelle partagée vise à aider l’accueil et les techniciens à travailler à partir d’informations cohérentes.",
+     "En séparant la base web, l’application technicien et les capacités multi-ateliers en phases, NaviTrends a établi une feuille de route pouvant être évaluée et mise en œuvre progressivement. Ce sont les bénéfices visés de la solution documentée, et non des résultats de performance vérifiés de manière indépendante."
+    ],
+    "nobtn": true,
+    "id": "valeur"
+   },
+   {
+    "type": "cta",
+    "h2": "Vous envisagez un logiciel sur mesure pour un atelier de réparation automobile ?",
+    "p": "NaviTrends aide les entreprises à définir des solutions web et mobiles pratiques autour de leurs workflows opérationnels, du cadrage initial à un plan de livraison par phases."
+   }
+  ],
+  "seo": {
+   "title": "",
+   "desc": ""
+  }
+ },
+ {
+  "slug": "arsenal-bache",
+  "title": "Simplifier la commande sur mesure avec un configurateur de produits",
+  "order": 3,
+  "status": "publish",
+  "case": {
+   "group": "Sur mesure",
+   "theme": "gold",
+   "client": "Arsenal Bâche",
+   "short_name": "Arsenal Bâche",
+   "logo": "v4/cases/arsenal-bache.png",
+   "logo_alt": "Logo Arsenal France",
+   "logo_dark": 0,
+   "kicker": "Étude de cas / Configurateur de produits sur mesure",
+   "summary": "Un projet de configurateur web sur mesure conçu pour aider les clients à spécifier des produits à la demande, voir le prix évoluer selon leurs options et demander un devis en ligne.",
+   "banner": "Des choix de produit à un devis clair",
+   "tags": [
+    "Configurateur de produits",
+    "Logiciel de devis sur mesure"
+   ]
+  },
+  "sections": [
+   {
+    "type": "numbered",
+    "n": "01",
+    "label": "Vue d’ensemble",
+    "id": "apercu",
+    "h2": "Transformer des choix de produit complexes en une expérience en ligne guidée",
+    "ps": [
+     "Une entreprise proposant des produits sur mesure avait besoin d’un moyen en ligne pour que ses clients choisissent les spécifications d’articles tels que des bâches sur mesure et des kits de carrosserie pour véhicules. Les dimensions, les matériaux et les accessoires optionnels influencent à la fois le produit et son prix, ce qui rend un catalogue à prix fixes inadapté.",
+     "NaviTrends a documenté une solution digitale par phases : un catalogue web et des configurateurs de produits interactifs d’abord, puis une application mobile reposant sur les mêmes workflows de produits et de devis."
+    ]
+   },
+   {
+    "type": "numbered",
+    "n": "02",
+    "label": "Le défi",
+    "id": "enjeu",
+    "panel": true,
+    "h2": "Quand chaque commande dépend des spécifications du client",
+    "ps": [
+     "Les clients avaient besoin d’un moyen simple de décrire exactement ce qu’ils voulaient, sans longs échanges pour établir les dimensions et les options. L’équipe commerciale, elle, avait besoin de devis cohérents fondés sur des règles de prix propres à chaque produit.",
+     "La solution devait aussi permettre au personnel de tenir à jour les produits et les prix, de recevoir les demandes clients et de gérer l’historique des devis sans demander de modifications techniques pour les mises à jour courantes."
+    ]
+   },
+   {
+    "type": "cards",
+    "cols": "3",
+    "label": "03 · Notre approche",
+    "h2": "Un configurateur de produits conçu autour du parcours de devis",
+    "intro": "La première phase web proposée repose sur trois fonctionnalités connectées :",
+    "id": "approche",
+    "pt": 60,
+    "items": [
+     {
+      "t": "Configuration interactive des produits",
+      "d": "Définir les options du produit comme les dimensions, le matériau et les accessoires, avec un prix affiché recalculé selon les spécifications choisies.",
+      "list": []
+     },
+     {
+      "t": "Devis PDF et demandes commerciales",
+      "d": "Générer un devis PDF à partir de la configuration choisie et envoyer une demande de devis ou de commande à l’équipe commerciale pour relecture et validation manuelle.",
+      "list": []
+     },
+     {
+      "t": "Gestion du catalogue et des prix",
+      "d": "Fournir des comptes clients avec historique des devis et une interface d’administration pour gérer les produits, les grilles tarifaires et les demandes entrantes.",
+      "list": []
+     }
+    ]
+   },
+   {
+    "type": "close",
+    "label": "04 · Valeur métier",
+    "h2": "Un parcours plus clair de la configuration à la demande commerciale",
+    "ps": [
+     "La solution web proposée offrirait aux clients un moyen guidé de configurer des produits sur mesure et de comprendre l’impact de leurs choix sur le prix avant d’envoyer leur demande. Les devis PDF et un flux central de demandes commerciales sont conçus pour rendre le suivi plus cohérent.",
+     "Pour l’entreprise, un catalogue modifiable et un back-office de gestion des prix soutiendraient la gestion quotidienne. Une application mobile a été prévue comme seconde phase distincte, et non comme une fonctionnalité de la première version web. Les documents sources définissent la solution visée, et non des améliorations de performance vérifiées ou des résultats de déploiement confirmés."
+    ],
+    "nobtn": true,
+    "id": "valeur"
+   },
+   {
+    "type": "cta",
+    "h2": "Besoin d’un configurateur pour des produits sur mesure ?",
+    "p": "NaviTrends aide les entreprises à concevoir des outils digitaux sur mesure qui simplifient les choix de produits complexes, les devis et les workflows de vente."
+   }
+  ],
+  "seo": {
+   "title": "",
+   "desc": ""
+  }
+ },
+ {
+  "slug": "patient-management",
+  "title": "Concevoir un parcours patient connecté pour un cabinet de chirurgie esthétique",
+  "order": 4,
+  "status": "publish",
+  "case": {
+   "group": "Sur mesure",
+   "theme": "lilac",
+   "client": "Un médecin spécialisé en chirurgie esthétique",
+   "short_name": "Cabinet de chirurgie esthétique",
+   "logo": "",
+   "logo_alt": "",
+   "logo_dark": 0,
+   "kicker": "Étude de cas / Logiciel de gestion des patients",
+   "summary": "Un projet de logiciel de gestion des patients qui réunit demandes initiales, dossier médical d’admission, devis, rendez-vous et suivi dans un parcours digital coordonné.",
+   "banner": "De la première demande à des soins patients coordonnés",
+   "tags": [
+    "Logiciel de gestion des patients",
+    "Conception d’application web progressive"
+   ]
+  },
+  "sections": [
+   {
+    "type": "numbered",
+    "n": "01",
+    "label": "Vue d’ensemble",
+    "id": "apercu",
+    "h2": "Un parcours patient digital, de la première demande au suivi",
+    "ps": [
+     "Un cabinet de chirurgie esthétique avait besoin d’une façon plus structurée de gérer les demandes de patients et les étapes qui suivent. Les échanges pouvaient commencer par messagerie et réseaux sociaux, alors que les informations médicales, les devis et les rendez-vous exigeaient un processus cohérent et des responsabilités claires.",
+     "NaviTrends a élaboré un cahier des charges pour une application web progressive (PWA) reliant les patients, le praticien et la responsable du cabinet dans un workflow partagé, avec un accès par rôle et un traitement sécurisé des informations sensibles des patients comme exigences centrales."
+    ]
+   },
+   {
+    "type": "numbered",
+    "n": "02",
+    "label": "Le défi",
+    "id": "enjeu",
+    "panel": true,
+    "h2": "De demandes éparpillées à un parcours patient coordonné",
+    "ps": [
+     "Le cabinet devait transformer les demandes entrantes en dossiers patients complets et exploitables. La collecte des formulaires et des pièces justificatives, l’examen de chaque demande, la préparation des devis et la prise de rendez-vous impliquaient plusieurs transmissions entre patients et personnel.",
+     "Le défi dépassait la consultation initiale : le portail patient proposé devait aussi soutenir la communication et le suivi post-opératoire, tout en protégeant les informations médicales et en les réservant aux utilisateurs autorisés."
+    ]
+   },
+   {
+    "type": "cards",
+    "cols": "3",
+    "label": "03 · Notre approche",
+    "h2": "Une PWA de gestion des patients construite autour du parcours de soins",
+    "intro": "La solution documentée a organisé le parcours patient en trois domaines connectés :",
+    "id": "approche",
+    "pt": 60,
+    "items": [
+     {
+      "t": "Admission digitale du patient",
+      "d": "Concevoir la création de compte, les questionnaires médicaux structurés et le dépôt sécurisé de photos et de documents, afin que le praticien examine les demandes dans un dossier patient unique.",
+      "list": []
+     },
+     {
+      "t": "Examen clinique et coordination",
+      "d": "Définir un workflow pour l’examen par le praticien, les comptes rendus structurés, les devis préparés par la responsable du cabinet, les notifications aux patients et la planification des rendez-vous.",
+      "list": []
+     },
+     {
+      "t": "Communication et suivi du patient",
+      "d": "Prévoir un espace dédié au patient pour les devis, les messages et le suivi post-opératoire, ainsi que des tableaux de bord par rôle pour l’équipe du cabinet.",
+      "list": []
+     }
+    ]
+   },
+   {
+    "type": "close",
+    "label": "04 · Valeur métier",
+    "h2": "Une base plus claire pour coordonner patients et cabinet",
+    "ps": [
+     "Le logiciel de gestion des patients proposé réunit les étapes qui se répartiraient sinon entre messages, documents et outils administratifs séparés. Un workflow connecté vise à donner au praticien et à la responsable du cabinet une vision plus claire de chaque demande et de son étape suivante.",
+     "Le cahier des charges établit aussi des exigences d’accès sécurisé, de dossiers patients et de continuité après l’intervention. Ce sont les bénéfices visés de la solution documentée ; la source n’établit ni résultats mesurés ni les modules effectivement déployés."
+    ],
+    "nobtn": true,
+    "id": "valeur"
+   },
+   {
+    "type": "cta",
+    "h2": "Vous envisagez une expérience patient plus connectée ?",
+    "p": "NaviTrends aide les organisations à concevoir des applications web sur mesure qui relient demandes, équipes et workflows quotidiens autour des personnes qu’elles servent."
+   }
+  ],
+  "seo": {
+   "title": "",
+   "desc": ""
+  }
+ }
+]

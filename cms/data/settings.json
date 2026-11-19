@@ -1,0 +1,62 @@
+{
+ "tn_name": "Navitrends Tunisie",
+ "tn_address": "15 avenue Farhat Hached, B13 1ère étage\nImmeuble Amina 2080 Ariana",
+ "tn_email": "commercial@navitrends.com",
+ "tn_phone": "(+216) 58 188 873",
+ "tn_tel": "+21658188873",
+ "uk_name": "Navitrends Royaume-Uni",
+ "uk_address": "NAVITRENDS LTD, 5 Brayford Square\nLondres, Royaume-Uni E1 0SG",
+ "uk_email": "contact@navitrends.uk",
+ "uk_phone": "+447418361296",
+ "uk_tel": "+447418361296",
+ "facebook": "https://www.facebook.com/navitrends.tn",
+ "linkedin": "https://www.linkedin.com/company/navitrends/",
+ "stages_url": "https://stage.navitrends.com/",
+ "form_to": "commercial@navitrends.com",
+ "wordmark": "Navitrends",
+ "footer_p1": "Navitrends accompagne les entreprises dans leur transformation digitale à travers l’intégration d’ERP, l’automatisation des processus métiers, le développement de solutions sur mesure et le conseil en organisation.",
+ "footer_p2": "Implantée en Tunisie et au Royaume-Uni, Navitrends intervient auprès des PME, industriels et organisations ambitieuses en Tunisie, en Europe et au Moyen-Orient.",
+ "legal_1": "© 2026 Navitrends – Digital Engineering & Business Automation",
+ "legal_2": "Creating value for businesses and teams",
+ "seo_home_title": "Société Navitrends – ERP, Automation & IA pour la performance des entreprises",
+ "seo_home_desc": "Navitrends accompagne les entreprises en Tunisie, en Europe et au Moyen-Orient : intégration ERP (Odoo, Dolibarr, ERPNext), automatisation des processus (APA), IA et développement sur mesure.",
+ "org_desc": "Digital Engineering & Business Automation : ERP, automatisation des processus, IA, intégration de systèmes et développement sur mesure.",
+ "org_logo": "",
+ "cases_label": "Travaux",
+ "cases_h1": "Nos réalisations",
+ "cases_tag": "Des projets innovants qui témoignent de notre expertise et de notre engagement envers la réussite de nos clients.",
+ "cases_intro": "ERPNext, digitalisation industrielle, logiciels sur mesure : les défis rencontrés, les solutions conçues et les résultats visés.",
+ "blog_label": "Blog",
+ "blog_h1": "Expertise digitale Navitrends",
+ "blog_tag": "Analyses, retours d’expérience et bonnes pratiques sur l’ERP, l’automatisation, l’intégration des systèmes et l’IA.",
+ "site_name": "Navitrends",
+ "site_url": "https://navitrends.com",
+ "smtp_host": "",
+ "smtp_port": "587",
+ "smtp_secure": "tls",
+ "smtp_user": "",
+ "smtp_pass": "",
+ "mail_from": "",
+ "blog_cats": [
+  {
+   "name": "ERP & Systèmes de gestion",
+   "url": "https://navitrends.com/category/erp-systemes-de-gestion/"
+  },
+  {
+   "name": "Automatisation & IA",
+   "url": "https://navitrends.com/category/automatisation-intelligence-artificielle/"
+  },
+  {
+   "name": "Intégration & Systèmes d’information",
+   "url": "https://navitrends.com/category/integration-systemes-dinformation/"
+  },
+  {
+   "name": "Pilotage de la performance",
+   "url": "https://navitrends.com/category/accompagnement-operationnel-montee-en-competence-des-equipes/"
+  },
+  {
+   "name": "Développement sur mesure",
+   "url": "https://navitrends.com/category/developpement-web-applications-sur-mesure/"
+  }
+ ]
+}

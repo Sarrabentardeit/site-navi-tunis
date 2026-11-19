@@ -1,0 +1,247 @@
+[
+ {
+  "name": "Démarrage, cadrage et méthode",
+  "items": [
+   {
+    "q": "Par où commencer si nous voulons structurer l’entreprise digitalement ?",
+    "a": "On commence par un diagnostic rapide : objectifs, processus clés, données disponibles, outils actuels, irritants opérationnels. Ensuite, on priorise 2–3 chantiers à fort impact (ERP, automatisation, intégrations) et on construit une feuille de route réaliste."
+   },
+   {
+    "q": "Quel est le premier livrable avant de lancer un projet ?",
+    "a": "Un cadrage clair : périmètre, processus concernés, rôles, données nécessaires, risques, jalons, critères d’acceptation et planning. Cela évite les incompréhensions et fixe une base commune."
+   },
+   {
+    "q": "Comment Navitrends évite le “flou” et les changements permanents ?",
+    "a": "En fixant des points de verrouillage : validation du besoin, validation du périmètre, validation des maquettes/flux, validation des règles métiers, puis validation de recette. Toute évolution passe par une demande formalisée avec impact coût/délai."
+   },
+   {
+    "q": "Peut-on livrer progressivement au lieu d’attendre la fin du projet ?",
+    "a": "Oui. Nous privilégions une livraison par lots (MVP puis itérations) : vous obtenez rapidement une version opérationnelle, et on l’améliore ensuite selon l’usage réel."
+   },
+   {
+    "q": "Comment se déroule un diagnostic initial ?",
+    "a": "Entretien avec direction + utilisateurs clés, cartographie des processus, inventaire des outils/données, analyse des points de friction, recommandations prioritaires et plan d’actions."
+   },
+   {
+    "q": "Combien de temps faut-il pour lancer un projet sérieusement ?",
+    "a": "Le cadrage initial peut être fait rapidement, mais le lancement solide dépend de la disponibilité des personnes, des données, et de la validation du périmètre. L’objectif est d’éviter de démarrer “dans le brouillard”."
+   },
+   {
+    "q": "Qu’est-ce qui fait réussir une transformation digitale ?",
+    "a": "La clarté des objectifs, des règles métiers, la qualité des données, l’implication des utilisateurs, une gouvernance simple (qui décide quoi) et une conduite du changement (formation + accompagnement)."
+   },
+   {
+    "q": "Quel niveau d’implication demandez-vous au client ?",
+    "a": "Un sponsor (décideur) + un référent métier par domaine (vente/stock/compta/production…) pour valider rapidement. Sans validation côté métier, le projet ralentit."
+   },
+   {
+    "q": "Comment gérez-vous les priorités quand tout est urgent ?",
+    "a": "Nous distinguons : urgence opérationnelle (bloquants), impact business (gain/risque), dépendances (données, intégrations), et effort. On priorise ce qui crée de la valeur rapidement et sécurise la suite."
+   },
+   {
+    "q": "Proposez-vous une feuille de route sur 6 à 12 mois ?",
+    "a": "Oui. Une feuille de route structurée : quick wins, socle ERP, automatisations, intégrations, dashboards, montée en compétence et évolutions."
+   }
+  ]
+ },
+ {
+  "name": "ERP (Odoo • Dolibarr • ERPNext)",
+  "items": [
+   {
+    "q": "Quel ERP choisir entre Odoo, Dolibarr et ERPNext ?",
+    "a": "Le choix dépend de votre taille, complexité, budget, besoins de personnalisation et maturité. Dolibarr est souvent rapide et léger, Odoo très modulaire, ERPNext structurant et adapté à certains contextes industriels/services. On recommande après diagnostic."
+   },
+   {
+    "q": "Pouvons-nous démarrer petit et évoluer ensuite ?",
+    "a": "Oui. On démarre avec un périmètre minimum (ex. vente/facturation/stock) puis on ajoute achats, CRM, RH, production, BI, automatisations selon l’adoption et le ROI."
+   },
+   {
+    "q": "Comment assurer la cohérence des stocks et des ventes ?",
+    "a": "Par une structuration des articles, unités, emplacements, règles de mouvement, droits utilisateurs, procédures de transfert et contrôles. L’ERP doit refléter vos flux réels, pas l’inverse."
+   },
+   {
+    "q": "Peut-on intégrer un ERP à la comptabilité existante ?",
+    "a": "Oui. Selon votre contexte : synchronisation, export/import, API, ou connecteur. On définit le “référentiel” (source de vérité) et les règles de synchronisation."
+   },
+   {
+    "q": "Combien de temps prend un projet ERP ?",
+    "a": "Selon périmètre et données : un démarrage peut être rapide, mais une implémentation complète demande un phasage. Nous privilégions une mise en production progressive avec lots."
+   },
+   {
+    "q": "Comment gérez-vous la migration depuis Excel ou un ancien logiciel ?",
+    "a": "On nettoie et normalise les données (clients, produits, stocks, historiques), on importe selon des modèles contrôlés, on teste, puis on bascule avec une date de coupure claire."
+   },
+   {
+    "q": "L’ERP peut-il couvrir des besoins spécifiques métier ?",
+    "a": "Oui. On privilégie d’abord la configuration, puis des extensions légères. Si besoin, on développe des modules ou des applications complémentaires pour rester robuste."
+   },
+   {
+    "q": "Comment sécuriser les droits d’accès dans l’ERP ?",
+    "a": "On définit des rôles (vente, stock, achat, admin…), des droits par fonction et, si nécessaire, par entité/site. On limite l’accès aux opérations sensibles (validation, annulation, changement de prix, etc.)."
+   }
+  ]
+ },
+ {
+  "name": "Automatisation des processus (APA & workflows intelligents)",
+  "items": [
+   {
+    "q": "Qu’est-ce que l’automatisation (APA) concrètement ?",
+    "a": "C’est l’automatisation de tâches répétitives : saisies, transferts de données, notifications, validations, génération de documents, synchronisation entre outils, relances, reporting."
+   },
+   {
+    "q": "Quels processus sont les meilleurs candidats à l’automatisation ?",
+    "a": "Ceux qui sont répétitifs, fréquents, sujets aux erreurs, et qui consomment du temps : facturation, relances, transferts stock, demandes internes, synchronisation e-commerce, reporting."
+   },
+   {
+    "q": "L’automatisation remplace-t-elle les employés ?",
+    "a": "Non. Elle retire les tâches à faible valeur (saisie, copier-coller) pour libérer du temps sur la relation client, la décision, l’analyse et l’amélioration."
+   },
+   {
+    "q": "Peut-on automatiser des validations (workflow d’approbation) ?",
+    "a": "Oui. On met en place des étapes : demande → validation → exécution → trace. Cela sécurise les opérations sensibles (stocks, achats, remises, paiements)."
+   },
+   {
+    "q": "Peut-on automatiser l’emailing et les relances ?",
+    "a": "Oui, avec une approche responsable : segmentation, contenus pertinents, fréquence maîtrisée, suivi des réponses, et automatisations basées sur le comportement (ouverture, clic, réponse)."
+   },
+   {
+    "q": "Comment mesurer le ROI d’une automatisation ?",
+    "a": "Par le temps économisé, la baisse d’erreurs, la vitesse de traitement, la réduction des retards, la satisfaction, et l’impact sur la trésorerie (relances + encaissements)."
+   },
+   {
+    "q": "L’automatisation peut-elle s’intégrer à plusieurs systèmes ?",
+    "a": "Oui. On connecte ERP, site web, CRM, messagerie, outils marketing, spreadsheets, APIs externes. On définit des règles de synchronisation et des logs de traçabilité."
+   }
+  ]
+ },
+ {
+  "name": "Développement web et mobile sur mesure",
+  "items": [
+   {
+    "q": "Dans quels cas faut-il du sur mesure plutôt qu’un outil standard ?",
+    "a": "Quand vos processus sont spécifiques, quand la solution standard oblige des contournements, quand l’intégration est critique, ou quand vous visez une expérience utilisateur unique (configurateur, portail, appli terrain)."
+   },
+   {
+    "q": "Pouvez-vous développer un portail client connecté à l’ERP ?",
+    "a": "Oui : suivi commandes, factures, paiements, tickets, documents, devis, statut d’intervention. Le portail améliore la satisfaction et réduit les sollicitations support."
+   },
+   {
+    "q": "Pouvez-vous développer une application mobile pour une équipe terrain ?",
+    "a": "Oui : saisie interventions, photos, signatures, géolocalisation (si nécessaire), checklists, synchronisation offline/online, puis intégration ERP/CRM."
+   },
+   {
+    "q": "Comment assurez-vous la qualité (tests) ?",
+    "a": "Par des tests fonctionnels, des scénarios métier, validation des flux, tests de performance selon besoin, et une phase de recette client avec critères d’acceptation."
+   },
+   {
+    "q": "L’application peut-elle évoluer sans tout refaire ?",
+    "a": "Oui si l’architecture est pensée pour l’évolution : modularité, APIs, séparation front/back, bonnes pratiques de versioning, et roadmap claire."
+   }
+  ]
+ },
+ {
+  "name": "Intégration de systèmes & structuration des données",
+  "items": [
+   {
+    "q": "Pourquoi la structuration des données est-elle cruciale ?",
+    "a": "Parce que des données incohérentes créent des erreurs en cascade : stocks faux, factures erronées, reporting inutilisable. La donnée est la base d’une entreprise structurée."
+   },
+   {
+    "q": "Que signifie “source de vérité” (single source of truth) ?",
+    "a": "C’est l’outil référentiel (souvent l’ERP) qui détient la donnée maître. Les autres systèmes consomment ou enrichissent cette donnée via des règles claires."
+   },
+   {
+    "q": "Pouvez-vous intégrer un site e-commerce à l’ERP ?",
+    "a": "Oui : synchronisation produits/prix/stock, commandes, clients, statuts, factures. On choisit une fréquence et une logique de gestion des conflits."
+   },
+   {
+    "q": "Pouvez-vous intégrer WordPress/woocommerce, Navision ou d’autres systèmes ?",
+    "a": "Oui, via API, fichiers structurés, webhooks ou connecteurs. On définit le mapping des données, la sécurité, et la traçabilité des échanges."
+   },
+   {
+    "q": "Comment sécurisez-vous les échanges de données ?",
+    "a": "Authentification API, chiffrement si besoin, restrictions IP/roles, logs, contrôle d’accès, et monitoring. La sécurité dépend aussi des pratiques internes et des environnements."
+   }
+  ]
+ },
+ {
+  "name": "Conseil en transformation digitale & optimisation des processus",
+  "items": [
+   {
+    "q": "En quoi consiste votre service de conseil ?",
+    "a": "Nous analysons vos processus, clarifions vos objectifs, priorisons les chantiers, définissons une feuille de route, aidons aux décisions (outils/architecture), et sécurisons la mise en œuvre pour créer de la valeur mesurable."
+   },
+   {
+    "q": "Comment éviter d’acheter des outils inutiles ?",
+    "a": "En partant du besoin métier, en testant avec un MVP, en mesurant l’usage, puis en investissant progressivement. Le conseil sert à réduire le risque et maximiser l’impact."
+   },
+   {
+    "q": "Comment prioriser entre ERP, automation, site web, mobile ?",
+    "a": "On priorise selon l’impact opérationnel, la trésorerie, le risque, la dépendance aux données, et la capacité d’adoption. Souvent, ERP + data + quick wins d’automation créent une base solide."
+   },
+   {
+    "q": "Pouvez-vous piloter un programme sur 12 mois ?",
+    "a": "Oui, avec jalons, lots livrables, gouvernance, indicateurs mensuels, et arbitrages. L’objectif est d’avancer progressivement sans surcharge ni dérive."
+   },
+   {
+    "q": "Quels indicateurs suivre pour une transformation digitale ?",
+    "a": "Temps de traitement, taux d’erreurs, délais, adoption utilisateurs, qualité des données, satisfaction, cash collection, performance commerciale, coûts opérationnels et stabilité des systèmes."
+   }
+  ]
+ },
+ {
+  "name": "Formation, accompagnement et support",
+  "items": [
+   {
+    "q": "Faites-vous de la formation pour nos équipes ?",
+    "a": "Oui. Formation pratique orientée usage réel, avec supports (procédures, vidéos si nécessaire), exercices, et validation de compétence par scénarios métier."
+   },
+   {
+    "q": "Comment garantir l’adoption par les utilisateurs ?",
+    "a": "En impliquant les utilisateurs clés tôt, en simplifiant les parcours, en formant par rôle, en accompagnant post-déploiement, et en améliorant selon les retours terrain."
+   },
+   {
+    "q": "Proposez-vous maintenance et support ?",
+    "a": "Oui, via des contrats de support/maintenance : correction, évolutions, mises à jour, sécurité, monitoring selon besoin, et optimisation continue."
+   },
+   {
+    "q": "Que se passe-t-il après la mise en production ?",
+    "a": "On stabilise, on corrige les ajustements, on suit l’adoption, on mesure les résultats, puis on planifie la phase d’amélioration continue (automation, dashboards, évolutions)."
+   }
+  ]
+ },
+ {
+  "name": "Délais, budget, qualité et gouvernance",
+  "items": [
+   {
+    "q": "Comment sont construits vos devis ?",
+    "a": "Sur la base du périmètre, des règles métiers, des données, des intégrations, des lots, et des critères de qualité. Nous distinguons ce qui est inclus, optionnel, et les dépendances côté client."
+   },
+   {
+    "q": "Comment évitez-vous les dépassements de budget ?",
+    "a": "Par un cadrage initial solide, une livraison par lots, des validations régulières, et une gestion formalisée des changements. On privilégie un MVP utile avant d’étendre."
+   },
+   {
+    "q": "Comment gérez-vous les demandes “gratuites” ou hors périmètre ?",
+    "a": "Nous fixons des règles : ce qui est inclus, ce qui relève du support, et ce qui relève d’une évolution. Toute demande hors périmètre est chiffrée et planifiée, sauf exception validée."
+   },
+   {
+    "q": "Qui décide quoi pendant un projet ?",
+    "a": "Nous recommandons une gouvernance simple : un sponsor côté client (décision), un référent métier (validation), et Navitrends (conception technique). Les décisions sont tracées pour éviter les ambiguïtés."
+   }
+  ]
+ },
+ {
+  "name": "Sécurité, hébergement et continuité",
+  "items": [
+   {
+    "q": "Où hébergez-vous les solutions (ERP / applis / sites) ?",
+    "a": "Selon le besoin : VPS, cloud, ou hébergement mutualisé (si adapté). L’essentiel est d’aligner performance, sécurité, sauvegardes et budget. Nous conseillons l’option la plus cohérente selon votre contexte."
+   },
+   {
+    "q": "Comment assurez-vous la sécurité et la continuité (sauvegardes, restauration) ?",
+    "a": "Par une stratégie de sauvegardes régulières, des accès sécurisés, mises à jour, monitoring si nécessaire, et procédures de restauration testées. La sécurité est un processus continu, pas une action ponctuelle."
+   }
+  ]
+ }
+]
