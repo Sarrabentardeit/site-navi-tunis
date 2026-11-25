@@ -63,6 +63,13 @@ function publish() {
   fs.cpSync(path.join(STATIC, 'img'), path.join(tmp, 'assets', 'img'), { recursive: true });
   if (fs.existsSync(UPLOADS)) fs.cpSync(UPLOADS, path.join(tmp, 'uploads'), { recursive: true });
 
+  /* fichiers racine (ex. vérification Google Search Console) */
+  fs.readdirSync(STATIC).forEach(name => {
+    if (/^google[a-z0-9]+\.html$/i.test(name) || name === 'favicon.ico') {
+      fs.copyFileSync(path.join(STATIC, name), path.join(tmp, name));
+    }
+  });
+
   /* bascule */
   fs.rmSync(old, { recursive: true, force: true });
   if (fs.existsSync(SITE)) fs.renameSync(SITE, old);
