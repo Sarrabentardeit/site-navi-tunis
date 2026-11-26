@@ -1,0 +1,14 @@
+{
+  "name": "@navi/log-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@navi/config": "workspace:*",
+    "@navi/security": "workspace:*"
+  }
+}

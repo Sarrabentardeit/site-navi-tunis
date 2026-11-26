@@ -213,6 +213,7 @@
   var NAV = [
     ['/', 'Tableau de bord', '⌂'], ['grp', 'Contenu'], ['/home', 'Page d’accueil', '★'], ['/pages', 'Pages et services', '☰'], ['/cases', 'Études de cas', '◎'],
     ['/articles', 'Articles (Insights)', '✎'], ['/faq', 'FAQ', '?'], ['grp', 'Échanges'], ['/requests', 'Demandes reçues', '✉'], ['/media', 'Images', '▣'],
+    ['grp', 'Référencement'], ['/seo', 'SEO', '◈'], ['/geo', 'GEO', '✦'], ['/visibility', 'Visibilité', '◉'],
     ['grp', 'Administration'], ['/settings', 'Réglages du site', '⚙'], ['/users', 'Comptes', '☺'], ['/backup', 'Sauvegarde', '⤓']
   ];
   function layout(path, title, actions, content) {
@@ -296,6 +297,9 @@
     el.appendChild(h('section', { 'class': 'dash-sec' },
       h('div', { 'class': 'dash-h' }, h('h2', { text: 'Modifier le contenu' }), h('p', { text: 'Chaque enregistrement met le site à jour tout de suite.' })),
       h('div', { 'class': 'grid g3' },
+        quick('#/seo', '◈', 'SEO', 'Titres, 404, redirections, rapport'),
+        quick('#/geo', '✦', 'GEO', 'Présentation claire et résumé du site'),
+        quick('#/visibility', '◉', 'Visibilité', 'GSC, positions, mots-clés, rapport'),
         quick('#/home', '★', 'Page d’accueil', 'Bandeau, chiffres, boutons, blocs'),
         quick('#/pages', '☰', 'Pages et services', 'Créer, modifier, SEO, ordre'),
         quick('#/cases', '◎', 'Études de cas', 'Réalisations clients'),
@@ -377,8 +381,27 @@
 
   function seoPanel(root, data, label) {
     var p = panel('Référencement Google (SEO)', false);
-    renderFields(p.body, [field('title', 't', 'Titre pour Google' + (label || ''), { h: 'Vide = titre de la page + « – Société Navitrends ».' }), field('desc', 'area', 'Description pour Google (environ 155 caractères)')], obj(data, 'seo'), function () { setDirty(true); });
     root.appendChild(p.root);
+    var seo = obj(data, 'seo');
+    var titleI = h('input', { type: 'text', value: seo.title || '', placeholder: 'Titre affiché dans Google' });
+    var descI = h('textarea', { rows: '3', placeholder: 'Résumé accrocheur pour Google (~155 caractères)' });
+    descI.value = seo.desc || '';
+    var titleMeta = h('p', { 'class': 'nv-help seo-count' });
+    var descMeta = h('p', { 'class': 'nv-help seo-count' });
+    function refreshCounts() {
+      var tl = (seo.title || '').trim().length;
+      var dl = (seo.desc || '').trim().length;
+      titleMeta.textContent = tl + ' caractère' + (tl === 1 ? '' : 's') + ' · idéal 50–60' + (tl > 60 ? ' · trop long' : tl && tl < 30 ? ' · un peu court' : tl ? ' · OK' : ' · vide = titre de page + marque');
+      titleMeta.className = 'nv-help seo-count' + (tl > 60 ? ' bad' : tl && tl >= 30 && tl <= 60 ? ' ok' : '');
+      descMeta.textContent = dl + ' caractère' + (dl === 1 ? '' : 's') + ' · idéal 140–160' + (dl > 160 ? ' · trop long' : dl && dl < 70 ? ' · un peu court' : dl ? ' · OK' : ' · recommandé');
+      descMeta.className = 'nv-help seo-count' + (dl > 160 ? ' bad' : dl && dl >= 70 && dl <= 160 ? ' ok' : '');
+    }
+    titleI.addEventListener('input', function () { seo.title = titleI.value; setDirty(true); refreshCounts(); });
+    descI.addEventListener('input', function () { seo.desc = descI.value; setDirty(true); refreshCounts(); });
+    refreshCounts();
+    p.body.appendChild(h('div', { 'class': 'nv-f' }, h('label', { 'class': 'nv-l', text: 'Titre pour Google' + (label || '') }), titleI, titleMeta));
+    p.body.appendChild(h('div', { 'class': 'nv-f' }, h('label', { 'class': 'nv-l', text: 'Description pour Google' }), descI, descMeta));
+    p.body.appendChild(h('p', { 'class': 'nv-help', text: 'Astuce : menu « SEO Intelligence » pour auditer tout le site.' }));
   }
   function sectionsPanel(root, data) {
     var p = panel('Sections de la page', true);
@@ -626,7 +649,7 @@
         ['Coordonnées — Royaume-Uni', [field('uk_name', 't', 'Nom'), field('uk_address', 'area', 'Adresse'), field('uk_email', 't', 'E-mail'), field('uk_phone', 't', 'Téléphone (affiché)'), field('uk_tel', 't', 'Téléphone (lien d’appel)')]],
         ['Liens', [field('facebook', 't', 'Facebook'), field('linkedin', 't', 'LinkedIn'), field('stages_url', 't', 'Catalogue de stages')]],
         ['Pied de page', [field('footer_p1', 'area', 'Texte de présentation (paragraphe 1)'), field('footer_p2', 'area', 'Texte de présentation (paragraphe 2)'), field('legal_1', 't', 'Mention 1'), field('legal_2', 't', 'Mention 2'), field('wordmark', 't', 'Mot géant qui défile')]],
-        ['Référencement (page d’accueil)', [field('seo_home_title', 't', 'Titre SEO de l’accueil'), field('seo_home_desc', 'area', 'Description SEO de l’accueil'), field('org_desc', 'area', 'Description de l’organisation'), field('org_logo', 't', 'Adresse du logo (pour Google)')]],
+        ['Référencement (page d’accueil)', [field('seo_home_title', 't', 'Titre SEO de l’accueil'), field('seo_home_desc', 'area', 'Description SEO de l’accueil'), field('seo_cases_title', 't', 'Titre SEO de la page Études de cas', { h: 'Laisser vide = titre automatique.' }), field('seo_cases_desc', 'area', 'Description SEO de la page Études de cas'), field('org_desc', 'area', 'Description de l’organisation'), field('org_logo', 't', 'Adresse du logo (pour Google)'), field('geo_brand_pitch', 'area', 'Résumé court de la société (GEO)', { h: 'Une phrase simple sur Navitrends. Sert au fichier résumé. Laisser vide = description d’organisation.' })]],
         ['Page « Études de cas »', [field('cases_label', 't', 'Étiquette'), field('cases_h1', 't', 'Titre'), field('cases_tag', 'area', 'Phrase d’accroche'), field('cases_intro', 'area', 'Introduction')]],
         ['Page « Articles »', [field('blog_label', 't', 'Étiquette'), field('blog_h1', 't', 'Titre'), field('blog_tag', 'area', 'Phrase d’accroche'), { k: 'blog_cats', t: 'rows', l: 'Catégories du menu Insights', tk: 'name', add: 'Ajouter une catégorie', f: [field('name', 't', 'Nom'), field('url', 't', 'Adresse du lien')] }]]
       ];
@@ -732,6 +755,19 @@
     });
   }
 
+  function screenSeo() {
+    if (!window.NVSeo) return { title: 'SEO', el: h('div', { 'class': 'empty', text: 'Module SEO non chargé (seo-ui.js).' }) };
+    return window.NVSeo({ h: h, clear: clear, api: api, toast: toast, guard: guard, fmtDate: fmtDate, go: go });
+  }
+  function screenGeo() {
+    if (!window.NVGeo) return { title: 'GEO', el: h('div', { 'class': 'empty', text: 'Module GEO non chargé (geo-ui.js).' }) };
+    return window.NVGeo({ h: h, clear: clear, api: api, toast: toast, guard: guard, fmtDate: fmtDate, go: go });
+  }
+  function screenVisibility() {
+    if (!window.NVVisibility) return { title: 'Visibilité', el: h('div', { 'class': 'empty', text: 'Module Visibilité non chargé (visibility-ui.js).' }) };
+    return window.NVVisibility({ h: h, clear: clear, api: api, toast: toast, guard: guard, fmtDate: fmtDate, go: go });
+  }
+
   function screenBackup() {
     var el = h('div');
     el.appendChild(h('div', { 'class': 'card' }, h('h2', { text: 'Télécharger une sauvegarde' }), h('p', { 'class': 'hint', text: 'Un seul fichier contenant tout le contenu du site (pages, accueil, études de cas, articles, FAQ, réglages, demandes). Les images téléversées sont dans le dossier « uploads » du serveur. Des copies automatiques sont aussi conservées à chaque enregistrement (dossier data/backups).' }),
@@ -768,6 +804,9 @@
         else if (path === '/faq') scr = screenFaq();
         else if (path === '/requests') scr = screenRequests();
         else if (path === '/media') scr = screenMedia();
+        else if (path === '/seo') scr = screenSeo();
+        else if (path === '/geo') scr = screenGeo();
+        else if (path === '/visibility') scr = screenVisibility();
         else if (path === '/settings') scr = screenSettings();
         else if (path === '/users') scr = screenUsers();
         else if (path === '/backup') scr = screenBackup();

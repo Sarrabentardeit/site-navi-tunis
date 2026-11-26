@@ -1,0 +1,74 @@
+[
+ {
+  "id": "d41c08dbd2ee",
+  "from": "/category/developpement-web-applications-sur-mesure",
+  "to": "/insights",
+  "code": 301,
+  "enabled": true,
+  "hits": 0,
+  "lastHit": null,
+  "note": "Créée depuis le SEO",
+  "created": "2026-11-26T08:59:35.548Z",
+  "updated": "2026-11-26T08:59:35.548Z"
+ },
+ {
+  "id": "f3a8af159b63",
+  "from": "/category/automatisation-intelligence-artificielle",
+  "to": "/insights",
+  "code": 301,
+  "enabled": true,
+  "hits": 0,
+  "lastHit": null,
+  "note": "Créée depuis le SEO",
+  "created": "2026-11-26T08:59:34.801Z",
+  "updated": "2026-11-26T08:59:34.801Z"
+ },
+ {
+  "id": "0615996e1096",
+  "from": "/category/integration-systemes-dinformation",
+  "to": "/insights",
+  "code": 301,
+  "enabled": true,
+  "hits": 0,
+  "lastHit": null,
+  "note": "Créée depuis le SEO",
+  "created": "2026-11-26T08:59:33.634Z",
+  "updated": "2026-11-26T08:59:33.634Z"
+ },
+ {
+  "id": "6e396746e7fc",
+  "from": "/category/erp-systemes-de-gestion",
+  "to": "/insights",
+  "code": 301,
+  "enabled": true,
+  "hits": 0,
+  "lastHit": null,
+  "note": "Créée depuis le SEO",
+  "created": "2026-11-26T08:59:32.189Z",
+  "updated": "2026-11-26T08:59:32.189Z"
+ },
+ {
+  "id": "6ed8d82de65a",
+  "from": "/category/accompagnement-operationnel-montee-en-competence-des-equipes",
+  "to": "/accompagnement-operationnel-montee-en-competence-des-equipes",
+  "code": 301,
+  "enabled": true,
+  "hits": 0,
+  "lastHit": null,
+  "note": "Créée depuis le SEO",
+  "created": "2026-11-26T08:59:29.532Z",
+  "updated": "2026-11-26T08:59:29.532Z"
+ },
+ {
+  "id": "9a3bb22d6be6",
+  "from": "/automatisation-pilier-secondaire",
+  "to": "/automatisation-des-processus-metiers",
+  "code": 301,
+  "enabled": true,
+  "hits": 0,
+  "lastHit": null,
+  "note": "Créée depuis le SEO",
+  "created": "2026-11-26T08:59:27.973Z",
+  "updated": "2026-11-26T08:59:27.973Z"
+ }
+]

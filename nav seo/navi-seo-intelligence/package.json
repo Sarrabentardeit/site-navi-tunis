@@ -1,0 +1,23 @@
+{
+  "name": "navi-seo-intelligence",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.15.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run",
+    "test:db": "vitest run --project db-integration",
+    "lint:rls": "tsx packages/db/scripts/lint-rls.ts",
+    "db:migrate": "tsx packages/db/src/migrate.ts",
+    "dev:web": "pnpm --filter @navi/web dev",
+    "dev:worker": "pnpm --filter @navi/worker dev",
+    "build": "pnpm -r build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

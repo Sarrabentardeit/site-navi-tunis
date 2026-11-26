@@ -531,8 +531,8 @@ function renderCasesIndex() {
     main += '    <section class="section" style="padding-top:20px">\n      <div class="container">\n        <header class="sec-head reveal">\n          <p class="label">' + esc(name + ' · ' + n + ' étude' + (n > 1 ? 's' : '') + ' de cas') + '</p>\n          <h2>' + esc(name) + '</h2>\n        </header>\n        <div class="cases-grid g' + (n <= 2 ? 2 : 3) + '">\n          ' + list.map((c, i) => caseCard(c, i)).join('\n') + '\n        </div>\n      </div>\n    </section>\n';
   });
   return shell({
-    path: casesUrl(), title: 'Nos réalisations – Études de cas ERPNext et logiciels sur mesure – Société Navitrends',
-    desc: 'Études de cas Navitrends : ERPNext, digitalisation industrielle et logiciels sur mesure — défis, solutions conçues et bénéfices visés.',
+    path: casesUrl(), title: S('seo_cases_title') || 'Nos réalisations – Études de cas ERPNext et logiciels sur mesure – Société Navitrends',
+    desc: S('seo_cases_desc') || 'Études de cas Navitrends : ERPNext, digitalisation industrielle et logiciels sur mesure — défis, solutions conçues et bénéfices visés.',
     bodyClass: themeClass('sky'), main, crumbs: [['Études de cas', '']]
   });
 }

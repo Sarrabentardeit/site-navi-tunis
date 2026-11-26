@@ -1,0 +1,20 @@
+[Unit]
+Description=Navi-SEO log agent (lecture seule des access.log, envoi signé d'agrégats)
+After=network-online.target
+
+[Service]
+User=navi-agent
+# L'agent n'a besoin que de lire les logs et d'écrire son dossier d'état.
+EnvironmentFile=/etc/navi-agent.env
+ExecStart=/usr/bin/node --import tsx /opt/navi-seo-intelligence/apps/log-agent/src/main.ts
+Restart=always
+RestartSec=10
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadOnlyPaths=/var/log/apache2
+ReadWritePaths=/var/lib/navi-agent
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,20 @@
+{
+ "at": "2026-11-26T08:58:26.612Z",
+ "score": 82,
+ "counts": {
+  "high": 21,
+  "med": 0,
+  "low": 4
+ },
+ "totals": {
+  "pages": 23,
+  "issues": 25,
+  "words": 13852,
+  "fixable": 0,
+  "drafts": 0,
+  "redirects": 0,
+  "errors404": 0,
+  "indexable": 23,
+  "noindex": 0
+ }
+}

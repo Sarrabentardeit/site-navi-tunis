@@ -1,0 +1,19 @@
+[Unit]
+Description=Navi-SEO worker (pg-boss)
+After=network-online.target postgresql.service
+
+[Service]
+User=navi
+WorkingDirectory=/opt/navi-seo-intelligence
+# Le worker n'a besoin QUE de DATABASE_URL_WORKER, CREDENTIALS_KEYRING et des plafonds : fichier d'environnement séparé.
+EnvironmentFile=/etc/navi-worker.env
+ExecStart=/usr/bin/pnpm --filter @navi/worker start
+Restart=always
+RestartSec=10
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

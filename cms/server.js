@@ -7,6 +7,9 @@ const crypto = require('crypto');
 const store = require('./lib/store');
 const auth = require('./lib/auth');
 const mail = require('./lib/mail');
+const seo = require('./lib/seo');
+const geo = require('./lib/geo');
+const visibility = require('./lib/visibility');
 const { publish, SITE, UPLOADS } = require('./lib/publish');
 const sch = require('./lib/schema.json');
 
@@ -52,6 +55,7 @@ function sendFile(req, res, file, extra) {
   });
 }
 function notFound(req, res) {
+  try { seo.log404(req.url || '/'); } catch (e) { /* ne jamais bloquer la 404 */ }
   const f = path.join(SITE, '404.html');
   fs.readFile(f, (e, b) => { res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }); res.end(e ? 'Page introuvable' : b); });
 }
@@ -362,6 +366,9 @@ async function api(req, res, url) {
   /* sauvegarde complète */
   if (p === '/export' && m === 'GET') {
     const all = store.all(); delete all.mocks; all.requests = store.read('requests', []);
+    all.redirects = seo.listRedirects();
+    all['seo-404'] = seo.list404();
+    all['seo-page-meta'] = store.read('seo-page-meta', {});
     const b = JSON.stringify(all, null, 1);
     res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Content-Disposition': 'attachment; filename="navitrends-sauvegarde-' + new Date().toISOString().slice(0, 10) + '.json"', 'Cache-Control': 'no-store' });
     return res.end(b);
@@ -371,7 +378,88 @@ async function api(req, res, url) {
     if (!b || typeof b !== 'object' || !Array.isArray(b.pages) || !Array.isArray(b.cases) || !b.settings) throw fail(400, 'Ce fichier n’est pas une sauvegarde Navitrends valide.');
     ['settings', 'home', 'pages', 'cases', 'faq', 'articles'].forEach(n => { if (b[n] != null) store.write(n, b[n]); });
     if (Array.isArray(b.requests)) store.write('requests', b.requests);
+    if (Array.isArray(b.redirects)) store.write('redirects', b.redirects);
+    if (Array.isArray(b['seo-404'])) store.write('seo-404', b['seo-404'], { backup: false });
+    if (b['seo-audit']) store.write('seo-audit', b['seo-audit']);
+    if (b['seo-page-meta'] && typeof b['seo-page-meta'] === 'object') store.write('seo-page-meta', b['seo-page-meta']);
+    seo.reset();
     return json(res, 200, { ok: true, publish: doPublish() });
+  }
+
+  /* ---------- SEO pro ---------- */
+  if (p === '/seo/overview' && m === 'GET') return json(res, 200, seo.overview());
+  if (p === '/seo/audit' && m === 'GET') return json(res, 200, { report: seo.analyze() });
+  if (p === '/seo/audit' && m === 'POST') return json(res, 200, { ok: true, report: seo.runAudit() });
+  if (p === '/seo/meta' && m === 'PUT') {
+    seo.setMeta(await body());
+    return json(res, 200, { ok: true, publish: doPublish() });
+  }
+  if (p === '/seo/targets' && m === 'PUT') return json(res, 200, seo.setTargets(await body()));
+  if (p === '/seo/fix' && m === 'POST') {
+    const r = seo.applyFixes(await body());
+    if (r.applied) r.publish = doPublish();
+    return json(res, 200, r);
+  }
+  if (p === '/seo/404' && m === 'GET') return json(res, 200, { items: seo.list404Enriched() });
+  if (p === '/seo/404' && m === 'DELETE') {
+    seo.clear404(url.searchParams.get('path') || '');
+    return json(res, 200, { ok: true, items: seo.list404Enriched() });
+  }
+  if (p === '/seo/redirects' && m === 'GET') return json(res, 200, { items: seo.listRedirects() });
+  if (p === '/seo/redirects/log' && m === 'GET') return json(res, 200, { items: seo.listRedirectLog() });
+  if (p === '/seo/redirects' && m === 'POST') return json(res, 200, Object.assign({ ok: true }, seo.upsertRedirect(await body())));
+  if (p === '/seo/redirects/import' && m === 'POST') { const b = await body(); return json(res, 200, Object.assign({ ok: true }, seo.importRedirects(b.text, b.code))); }
+  if (p === '/seo/redirects/test' && m === 'GET') return json(res, 200, seo.testRedirect(url.searchParams.get('path') || '/'));
+  if ((mm = /^\/seo\/redirects\/([a-f0-9]+)$/.exec(p))) {
+    if (m === 'PUT') return json(res, 200, Object.assign({ ok: true }, seo.upsertRedirect(await body(), mm[1])));
+    if (m === 'DELETE') return json(res, 200, { ok: true, items: seo.deleteRedirect(mm[1]) });
+  }
+  if (p === '/seo/report' && m === 'GET') return json(res, 200, seo.report());
+  if (p === '/seo/report.html' && m === 'GET') {
+    const html = seo.reportHtml();
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' });
+    return res.end(html);
+  }
+  if (p === '/seo/export' && m === 'GET') {
+    const out = seo.exportCsv(url.searchParams.get('type') || 'issues');
+    res.writeHead(200, {
+      'Content-Type': 'text/csv; charset=utf-8',
+      'Content-Disposition': 'attachment; filename="' + out.filename + '"',
+      'Cache-Control': 'no-store'
+    });
+    return res.end(out.csv);
+  }
+
+  /* ---------- GEO (visibilité IA) ---------- */
+  if (p === '/geo/overview' && m === 'GET') return json(res, 200, geo.analyze());
+  if (p === '/geo/llms' && m === 'GET') return json(res, 200, { draft: geo.geoSettings().llms || geo.defaultLlms(), live: null, reset: geo.resetLlms().text });
+  if (p === '/geo/llms' && m === 'PUT') {
+    const r = geo.saveLlms(await body());
+    return json(res, 200, Object.assign(r, { publish: doPublish() }));
+  }
+  if (p === '/geo/llms/reset' && m === 'POST') return json(res, 200, geo.resetLlms());
+
+  /* ---------- Visibilité (GSC, positions, mots-clés, rapport) ---------- */
+  if (p === '/visibility/overview' && m === 'GET') return json(res, 200, visibility.overview());
+  if (p === '/visibility/gsc' && m === 'GET') return json(res, 200, visibility.gscOverview());
+  if (p === '/visibility/gsc' && m === 'PUT') return json(res, 200, visibility.setGscProperty(await body()));
+  if (p === '/visibility/gsc/import' && m === 'POST') return json(res, 200, visibility.importGsc(await body()));
+  if (p === '/visibility/ranks' && m === 'GET') return json(res, 200, visibility.listRanks());
+  if (p === '/visibility/ranks' && m === 'POST') return json(res, 200, visibility.addRank(await body()));
+  if ((mm = /^\/visibility\/ranks\/([a-z0-9]+)$/.exec(p))) {
+    if (m === 'DELETE') return json(res, 200, visibility.deleteRank(mm[1]));
+    if (m === 'POST') {
+      const b = await body();
+      if (b && b.check) return json(res, 200, await visibility.checkRank(mm[1]));
+      return json(res, 200, visibility.recordRank(mm[1], b));
+    }
+  }
+  if (p === '/visibility/keywords' && m === 'GET') return json(res, 200, visibility.siteKeywords());
+  if (p === '/visibility/report' && m === 'GET') return json(res, 200, visibility.monthlyReport());
+  if (p === '/visibility/report.html' && m === 'GET') {
+    const html = visibility.reportHtml();
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' });
+    return res.end(html);
   }
 
   throw fail(404, 'Route inconnue.');
@@ -406,6 +494,16 @@ const server = http.createServer(async (req, res) => {
 
     if (req.method !== 'GET' && req.method !== 'HEAD') { res.writeHead(405, { Allow: 'GET, HEAD, POST' }); return res.end(); }
 
+    /* redirections SEO (301/302) gérées depuis le back-office */
+    try {
+      const redir = seo.matchRedirect(pathname);
+      if (redir) {
+        const loc = /^https?:\/\//i.test(redir.to) ? redir.to : (redir.to + (url.search || ''));
+        res.writeHead(redir.code || 301, { Location: loc, 'Cache-Control': 'no-store' });
+        return res.end();
+      }
+    } catch (e) { /* ignorer et servir normalement */ }
+
     /* site public */
     let f = safeJoin(SITE, pathname.replace(/^\//, ''));
     if (!f) return notFound(req, res);
@@ -414,7 +512,9 @@ const server = http.createServer(async (req, res) => {
         if (!pathname.endsWith('/')) { res.writeHead(301, { Location: pathname + '/' + url.search }); return res.end(); }
         return sendFile(req, res, path.join(f, 'index.html'));
       }
-      return sendFile(req, res, f);
+      if (!err && st.isFile()) return sendFile(req, res, f);
+      /* fichier absent → tenter index.html pour /slug sans slash, sinon 404 */
+      return notFound(req, res);
     });
   } catch (e) {
     console.error(e);

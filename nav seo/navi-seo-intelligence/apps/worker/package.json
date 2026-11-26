@@ -1,0 +1,16 @@
+{
+  "name": "@navi/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "tsx watch src/main.ts", "start": "tsx src/main.ts", "typecheck": "tsc -p tsconfig.json" },
+  "dependencies": {
+    "@navi/audit": "workspace:*",
+    "@navi/collectors": "workspace:*",
+    "@navi/config": "workspace:*",
+    "@navi/db": "workspace:*",
+    "@navi/metrics": "workspace:*",
+    "pg": "^8.13.0",
+    "pg-boss": "^10.1.0"
+  }
+}

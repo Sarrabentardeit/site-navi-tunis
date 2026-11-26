@@ -25,8 +25,9 @@ Créer un compte en ligne de commande : `node cms/server.js user add email motde
 ## Ce que l'administrateur peut faire
 
 - **Page d'accueil** : tous les textes, images, chiffres, boutons.
-- **Pages et services** : créer, modifier, supprimer, réordonner, brouillon/publié, SEO (titre + description).
+- **Pages et services** : créer, modifier, supprimer, réordonner, brouillon/publié, SEO (titre + description + compteur de caractères).
 - **Études de cas**, **Articles (Insights)** (lien externe ou page interne), **FAQ**.
+- **SEO Intelligence** : score de santé, audit technique du contenu, suivi des 404, redirections 301/302.
 - **Demandes reçues** : devis, contacts, newsletter ; export CSV ; état de l'envoi d'e-mail.
 - **Images** : téléversement (PNG/JPG/WebP/GIF, 8 Mo) et sélecteur dans chaque champ image.
 - **Réglages** : coordonnées, pied de page, adresse qui reçoit les messages, SMTP (avec bouton « envoyer un test »).

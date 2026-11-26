@@ -48,12 +48,20 @@ function publish() {
 
   put(tmp, '404.html', R.render404());
 
-  /* référencement */
+  /* référencement + GEO */
   const b = R.base().replace(/\/$/, '');
   const day = new Date().toISOString().slice(0, 10);
   put(tmp, 'sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     + urls.map(u => '  <url><loc>' + R.esc(b + u.loc) + '</loc><lastmod>' + day + '</lastmod><priority>' + u.pri + '</priority></url>').join('\n') + '\n</urlset>\n');
-  put(tmp, 'robots.txt', 'User-agent: *\nAllow: /\nDisallow: /backoffice/\nDisallow: /api/\n\nSitemap: ' + b + '/sitemap.xml\n');
+  let robotsTxt = 'User-agent: *\nAllow: /\nDisallow: /backoffice/\nDisallow: /api/\n\nSitemap: ' + b + '/sitemap.xml\n';
+  let llmsTxt = '';
+  try {
+    const geo = require('./geo');
+    robotsTxt = geo.robotsTxtForPublish(b, geo.geoSettings().allowAi);
+    llmsTxt = geo.llmsForPublish();
+  } catch (e) { /* module GEO optionnel au boot */ }
+  put(tmp, 'robots.txt', robotsTxt);
+  if (llmsTxt) put(tmp, 'llms.txt', llmsTxt);
 
   /* fichiers statiques */
   fs.mkdirSync(path.join(tmp, 'assets', 'css'), { recursive: true });

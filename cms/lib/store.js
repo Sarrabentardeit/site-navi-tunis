@@ -14,11 +14,14 @@ function read(name, def) {
   try { return JSON.parse(fs.readFileSync(file(name), 'utf8')); } catch (e) { return def; }
 }
 
-function write(name, value) {
+/* données techniques (journaux, caches) : inutile de les sauvegarder à chaque écriture */
+const NOBACKUP = new Set(['sessions', 'seo-404', 'seo-history', 'seo-audit', 'seo-redirect-log', 'seo-fixes', 'visibility-gsc', 'visibility-ranks']);
+
+function write(name, value, opts) {
   const f = file(name);
   const json = JSON.stringify(value, null, 1);
   try {
-    if (fs.existsSync(f) && name !== 'sessions') {
+    if (fs.existsSync(f) && !NOBACKUP.has(name) && !(opts && opts.backup === false)) {
       const dir = path.join(DATA, 'backups');
       fs.mkdirSync(dir, { recursive: true });
       const stamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);

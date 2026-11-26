@@ -1,0 +1,47 @@
+name: CI
+on:
+  push: { branches: [main] }
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm lint:rls          # échoue si une table portant org_id n'a pas de politique RLS
+      - run: pnpm test --project unit
+
+  db-integration:
+    runs-on: ubuntu-24.04
+    services:
+      postgres:
+        image: postgres:16
+        env: { POSTGRES_USER: navi_migrator, POSTGRES_PASSWORD: ci-password, POSTGRES_DB: navi_test }
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U navi_migrator" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      # Le rôle de test doit pouvoir créer des rôles (CREATEROLE) : on le promeut après démarrage.
+      TEST_DATABASE_URL_MIGRATOR: postgres://navi_migrator:ci-password@localhost:5432/navi_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - name: Autoriser navi_migrator à créer les rôles applicatifs
+        run: PGPASSWORD=ci-password psql -h localhost -U navi_migrator -d navi_test -c "alter role navi_migrator createrole"
+      - run: pnpm test:db          # tests d'isolation RLS sur un vrai PostgreSQL
+
+  secrets-scan:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: gitleaks/gitleaks-action@v2
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }

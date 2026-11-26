@@ -1,0 +1,56 @@
+[
+ {
+  "id": "64431b61de0b",
+  "at": "2026-11-26T08:59:35.551Z",
+  "action": "create",
+  "from": "/category/developpement-web-applications-sur-mesure",
+  "to": "/insights",
+  "code": 301,
+  "redirectId": "d41c08dbd2ee"
+ },
+ {
+  "id": "f43895a6cac2",
+  "at": "2026-11-26T08:59:34.807Z",
+  "action": "create",
+  "from": "/category/automatisation-intelligence-artificielle",
+  "to": "/insights",
+  "code": 301,
+  "redirectId": "f3a8af159b63"
+ },
+ {
+  "id": "bd8ddbf20327",
+  "at": "2026-11-26T08:59:33.640Z",
+  "action": "create",
+  "from": "/category/integration-systemes-dinformation",
+  "to": "/insights",
+  "code": 301,
+  "redirectId": "0615996e1096"
+ },
+ {
+  "id": "f81ad68aacbd",
+  "at": "2026-11-26T08:59:32.207Z",
+  "action": "create",
+  "from": "/category/erp-systemes-de-gestion",
+  "to": "/insights",
+  "code": 301,
+  "redirectId": "6e396746e7fc"
+ },
+ {
+  "id": "ce1e538570e6",
+  "at": "2026-11-26T08:59:29.537Z",
+  "action": "create",
+  "from": "/category/accompagnement-operationnel-montee-en-competence-des-equipes",
+  "to": "/accompagnement-operationnel-montee-en-competence-des-equipes",
+  "code": 301,
+  "redirectId": "6ed8d82de65a"
+ },
+ {
+  "id": "f20e0a29718a",
+  "at": "2026-11-26T08:59:27.980Z",
+  "action": "create",
+  "from": "/automatisation-pilier-secondaire",
+  "to": "/automatisation-des-processus-metiers",
+  "code": 301,
+  "redirectId": "9a3bb22d6be6"
+ }
+]

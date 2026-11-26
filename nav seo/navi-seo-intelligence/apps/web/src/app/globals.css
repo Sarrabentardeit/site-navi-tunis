@@ -1,0 +1,13 @@
+:root { --navy:#0b1f3a; --cyan:#22d3ee; --red:#e5484d; --amber:#b7791f; --green:#2f855a; --bg:#f6f8fb; --fg:#14213d; --card:#fff; --line:#dde3ec; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0e1726; --fg:#e6edf7; --card:#15233a; --line:#26364f; } }
+* { box-sizing: border-box; } body { margin:0; font:15px/1.5 system-ui,sans-serif; background:var(--bg); color:var(--fg); }
+a { color: inherit; } main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.shell { display:grid; grid-template-columns: 230px 1fr; min-height:100vh; } @media (max-width: 800px) { .shell { grid-template-columns: 1fr; } }
+nav.side { background:var(--navy); color:#fff; padding:20px 14px; } nav.side a { display:block; padding:8px 10px; border-radius:6px; text-decoration:none; color:#fff; } nav.side a:hover { background:rgba(255,255,255,.12); }
+nav.side .soon { opacity:.55; padding:8px 10px; display:flex; justify-content:space-between; } .badge { font-size:11px; border:1px solid currentColor; border-radius:999px; padding:0 7px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; margin-bottom:16px; } .grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); }
+table { width:100%; border-collapse:collapse; } th,td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); } h1 { margin-top:0; }
+button, input, select { font:inherit; padding:8px 12px; border-radius:6px; border:1px solid var(--line); background:var(--card); color:var(--fg); } button { background:var(--navy); color:#fff; cursor:pointer; border:0; }
+.muted { opacity:.7; } .err { color:var(--red); } .ok { color:var(--green); } .warn { color:var(--amber); } form.inline { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.login { max-width:380px; margin:12vh auto; } .login input { width:100%; margin-bottom:10px; }
+.bar { height:8px; background:var(--line); border-radius:4px; overflow:hidden; } .bar > i { display:block; height:100%; background:var(--cyan); }
